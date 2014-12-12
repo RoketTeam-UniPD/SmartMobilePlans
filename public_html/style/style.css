@@ -6,10 +6,10 @@
 }
 
 html,body {
-	font-family:arial,helvetica, sans-serif;
+	font-family:Arial, Helvetica, sans-serif;
 	font-size: 100%;
 	max-width: 1680px;
-	margin: auto;	
+	margin: 1em auto;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -17,39 +17,34 @@ h1,h2,h3,h4,h5,h6{
 }
 
 a:link { 
-	color: #000009
-	text-decoration: underline;	
+	color: blue;
+	text-decoration: underline;
 }
 
 a:visited { 
-	font-weight: bold; 
-	text-decoration: underline; 
-	color: #A0A;
+    color: purple;
+	text-decoration: underline;
 }
 
 a:hover, a:focus, a:active { 
-	font-style: italic;
-	color: #0000E6;
+	color: green;
+    text-decoration: underline;
+    font-style: italic;
 }
 
 
-abbr {
-	border-bottom: none;
-}
 
-#header{
-    padding-bottom: 1em;
-}
 /***********************header************************/
 #header{
-    border: 2px solid;
-    border-radius: 10px;
     position: relative;
-	text-align: center;
-	margin-left:2%;
-    margin-right: 2%;
     height: 130px;
     top: 0em;
+    margin-left:2%;
+    margin-right: 2%;
+    text-align: center;
+    padding-bottom: 1em;
+    border: 2px solid;
+    border-radius: 10px;
 }
 
 /***********************breadcrumbs************************/
@@ -147,9 +142,14 @@ div.contenuto {
         background-color: #efefef;
         height: 400px;
     }
-#tabs { font-family: Verdana, sans-serif; font-size: 14px; 
-margin-left: 4.5%;}
+
+
+    
 /***********elementi tab********/
+#tabs {
+    font-family: Verdana, sans-serif; font-size: 14px; 
+    margin-left: 4.5%;
+}
 #tabs li {
     border-top:2px solid;
     border-left: 2px solid;
