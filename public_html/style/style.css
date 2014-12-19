@@ -1,4 +1,5 @@
-/***********************generale************************/
+/* Generali */
+
 * {
 	padding: 0;
 	margin: 0;
@@ -34,7 +35,8 @@ a:hover, a:focus, a:active {
 
 
 
-/***********************header************************/
+/* Header */
+
 #header{
     position: relative;
     height: 130px;
@@ -47,9 +49,11 @@ a:hover, a:focus, a:active {
     border-radius: 10px;
 }
 
-/***********************breadcrumbs************************/
 
-#breadcrumbs{
+
+/* Path */
+
+#path {
     position: relative;
     border: 2px solid;
     border-radius: 10px;
@@ -61,8 +65,11 @@ a:hover, a:focus, a:active {
     padding-left:1.0em;
 }
 
-/***********************logo************************/
-#immagine{
+
+
+/* Logo */
+
+#immagine {
     border: 2px solid;
     border-radius: 10px;
     display: block;
@@ -75,7 +82,11 @@ a:hover, a:focus, a:active {
     margin-left: 2%;
     padding: 1.0em;
 }
-/************************* nav**************************/
+
+
+
+/* Nav */
+
 #nav{
     position: relative;
     border-radius:10px;
@@ -100,7 +111,10 @@ a:hover, a:focus, a:active {
 	line-height: 2em;
 }
 
-/***********************contenuto************************/
+
+
+/* Content */
+
 #content{
     position: relative;
     border-radius:10px;
@@ -112,16 +126,11 @@ a:hover, a:focus, a:active {
     padding:0.1em 1.5em 0.5em;
     height: 350px;
 }
-/***********************footer************************/
-#footer{
-    border: 2px solid;
-    border-radius: 10px;
-	margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 0.5%;
-    padding:0.5em;
-}
-/***********************container************************/
+
+
+
+/* Container */
+
 #container { 
     border-radius:10px;
     border: 2px solid;
@@ -133,19 +142,19 @@ a:hover, a:focus, a:active {
     
 }
 div.contenuto {
-        
-        color: #222;
-        font-family: Verdana;
-        font-size: 12px;
-        margin-left: 2%;
-        margin-right: 2%;
-        background-color: #efefef;
-        height: 400px;
-    }
+    color: #222;
+    font-family: Verdana;
+    font-size: 12px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #efefef;
+    height: 400px;
+}
 
 
-    
-/***********elementi tab********/
+
+/* Tabs */
+
 #tabs {
     font-family: Verdana, sans-serif; font-size: 14px; 
     margin-left: 4.5%;
