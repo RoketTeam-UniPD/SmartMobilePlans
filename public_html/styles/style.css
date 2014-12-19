@@ -8,7 +8,7 @@
 
 html,body {
     font-family: 'Open Sans', sans-serif;
-	margin: auto;
+	margin: 0.5em auto 1.0em auto;
     width: 90%;
 }
 
@@ -19,6 +19,9 @@ html,body {
     text-align: center;
     background-color: #C7D0D5;
     padding: 2em;
+    border-left: 1px solid #93B1C6;
+    border-right: 1px solid #93B1C6;
+    border-top: 1px solid #93B1C6;
 }
 
 #header h1 {
