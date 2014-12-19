@@ -1,0 +1,8 @@
+# Directory generata dagli IDE della JetBrains
+.idea
+
+# File generati da OS X
+.DS_Store
+
+# File generati da Windows
+Thumbs.db
