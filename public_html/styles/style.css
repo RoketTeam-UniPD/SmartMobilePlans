@@ -41,7 +41,7 @@ html,body {
 
 #tabs {
     display: inline-block;
-    width: 100%;
+    width: 99.9%;
     text-align: center;
     border-left: 1px solid #93B1C6;
     border-top: 1px solid #93B1C6;
@@ -53,10 +53,9 @@ html,body {
     list-style-type: none;
     float: left;
     display: block;
-    width: 19.925%;
+    width: 20%;
     height: 50px;
-    border-right: 1px solid #93B1C6;
-
+    /*border-right: 1px solid #93B1C6;*/
 }
 #tabs li a {
     font-weight: bold;
