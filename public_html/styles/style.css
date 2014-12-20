@@ -6,9 +6,13 @@
 	border: 0;
 }
 
+html {
+    /*background: linear-gradient(#F5F5F5, #FF7148);*/
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
-	margin: 0.5em auto 1.0em auto;
+	margin: 1.0em auto 1.0em auto;
     width: 80%;
     border: 1px solid #93B1C6;
 }
@@ -18,7 +22,7 @@ body {
 
 #header {
     text-align: center;
-    background-color: #C7D0D5;
+    background-color: white;
     padding: 2em;
 }
 
@@ -41,10 +45,6 @@ body {
     width: 100%;
     text-align: center;
     border-top: 1px solid #93B1C6;
-}
-
-#tabs ul {
-
 }
 
 #tabs li {
@@ -89,9 +89,9 @@ body {
 
 /* Nav */
 
-#nav{
-	float:left;
-	width:18%;
+#nav {
+	float: left;
+	width: 18%;
     padding: 1em;
 }
 
@@ -104,7 +104,7 @@ body {
 
 /* Content */
 
-#content{
+#content {
     padding: 1em;
     margin-left: 20%;
 
@@ -123,7 +123,6 @@ body {
 #content h1 {
     margin-bottom: 0.5em;
 }
-
 
 
 
