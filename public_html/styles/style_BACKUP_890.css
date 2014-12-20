@@ -12,11 +12,17 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
+<<<<<<< HEAD
+	margin: 1.0em auto 1.0em auto;
+    width: 80%;
+    border: 1px solid #93B1C6;
+=======
 }
 
 .center {
     width: 76%;
     margin: auto;
+>>>>>>> design-test
 }
 
 
@@ -24,6 +30,10 @@ body {
 
 #header {
     text-align: center;
+<<<<<<< HEAD
+    background-color: white;
+=======
+>>>>>>> design-test
     padding: 2em;
 }
 
@@ -49,11 +59,13 @@ body {
     background-color: #FF7148;
 }
 
-
+<<<<<<< HEAD
+=======
 #tabs ul {
     overflow: hidden;
 }
 
+>>>>>>> design-test
 #tabs li {
     list-style-type: none;
     float: left;
