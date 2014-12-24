@@ -1,0 +1,43 @@
+/*
+
+Stili per il template della tariffa
+
+*/
+
+
+
+/*
+Da rimuovere perchè già presente in main.css,
+inserita solo per testing con pagina tariffa_template.html
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.offer {
+    display: inline-block;
+}
+
+.offer h3 {
+    color: #FF7148;
+    font-size: 2.0em;
+}
+
+.offer-options {
+    display: inline-block;
+}
+
+.offer-options span {
+    color: #FF7148;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.offer-price {
+    float: right;
+}
+
+.offer-price span {
+    font-weight: bolder;
+    font-size: 3.0em;
+}
