@@ -104,7 +104,19 @@ body {
 
 #nav ul {
 	list-style-type: none;
+}
 
+#nav li {
+    border-bottom: 1px solid #C7D0D5;
+    margin: 1.4em auto 1.4em auto;
+}
+
+
+#nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #93B1C6;
+    margin: 1.0em auto 1.0em auto;
 }
 
 
@@ -130,6 +142,7 @@ body {
 #content h1 {
     margin-bottom: 0.5em;
 }
+
 
 
 
