@@ -1,146 +1,177 @@
-/* Generali */
+/* General page style */
 
 * {
-	padding: 0;
-	margin: 0;
 	border: 0;
-}
-
-html {
-    /*background: linear-gradient(#F5F5F5, #FF7148);*/
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+	width: 80%;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #C7C7C7;
+	background-color:rgba(199,199,199,1);
+	background-image: url("../images/bg.png");
 }
 
-.center {
-    width: 76%;
-    margin: auto;
+
+
+
+/* General font style */
+
+h1 {
+	font-size:3.0em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #2A2829;
 }
+
+h2 {
+	font-size: 1.7em;
+	text-transform: uppercase;
+	color: #2A2829;
+}
+
+h3 {
+	font-size: 1.1em;
+	text-transform: uppercase;
+	color: #668284;
+}
+
+h4 {
+	font-size: 1em;
+	text-transform: uppercase;
+	color: #668284;
+}
+
+
 
 
 /* Header */
 
-#header {
-    text-align: center;
-    padding: 2em;
-}
-
-#header h1 {
-    color: #FF7148;
-    font-size: 4em;
-    text-shadow: 1px 1px rgba(62, 62, 62, 0.7);
-}
-
-#header h2 {
-    color: #93B1C6;
-    font-size: 2em;
-    text-shadow: 1px 1px rgba(62, 62, 62, 0.7);
+.header {
+	overflow: hidden;
+	padding: 2em;
+	text-align: center;
+	background-color: white;
 }
 
 
-/* Tabs */
 
-#tabs {
-    width: 100%;
-    text-align: center;
-    border-top: 1px solid #93B1C6;
-    background-color: #FF7148;
+
+/* Main Menu */
+
+.menu {
+	overflow: hidden;
+	padding: 0;
+	font-weight: bold;
+	background-color: #668284;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu li a {
+	float:left;
+	padding: 0.7em;
+	text-decoration: none;
+	color: #FFF;
+}
+
+.menu li a:hover {
+	background-color: #2A2829;
+}
+
+.menu li .active {
+	background-color: #2A2829;
+}
+
+/* da rivere dimensioni*/
+@media screen and (max-width: 600px) {
+	.menu li {
+		display: block;
+	}
+	.menu li a {
+		width: 100%;
+	}
 }
 
 
-#tabs ul {
-    overflow: hidden;
-}
-
-#tabs li {
-    list-style-type: none;
-    float: left;
-    display: block;
-    width: 20%;
-    height: 50px;
-    background-color: #FF7148;
-}
-#tabs li a {
-    font-weight: bold;
-    color: #F5F5F5;
-    text-decoration: none;
-    line-height: 50px;
-}
 
 
-/* Path */
+/* Breadcrumbs */
 
-#path {
-    clear: both;
-    background-color: #C7D0D5;
-    color: #F5F5F5;
-    padding: 0.5em 0.5em 0.5em 1.5em;
-    border-top: 1px solid #93B1C6;
+.breadcrumbs {
+	padding: 0.7em;
+	color: #FFF;
+	background-color: #2A2829;
 }
+
 
 
 
 /* Container */
 
-#container {
-    background-color: #F5F5F5;
-    clear: both;
-    overflow: hidden;
-    border-top: 1px solid #93B1C6;
-    border-bottom: 1px solid #93B1C6;
+.container {
+	overflow: hidden;
+	border-bottom: 1px solid #93B1C6;
+	border-top: 1px solid #93B1C6;
+	background-color: #FFF;
 }
 
 
 
-/* Nav */
 
-#nav {
+/* Content */
+
+.content {
 	float: left;
-	width: 18%;
-    padding: 1em;
+	width: 70%;
+	padding: 1.5em 1em 1.5em 2em;
 }
 
-#nav ul {
+.content h2 {
+	margin-bottom: 0.5em;
+}
+
+.content p {
+	margin-bottom: 1.5em;
+}
+
+
+
+/* News vertical */
+/* da aggiungere dopo una dim minima deve andare in fondo alla pagina */
+.news {
+	padding: 1.5em 2em 1.5em 1em;
+	overflow: hidden;
+}
+
+.news ul {
 	list-style-type: none;
 }
 
-#nav li {
+.news li {
     border-bottom: 1px solid #C7D0D5;
     margin: 1.4em auto 1.4em auto;
 }
 
 
-#nav a {
+.news a {
     text-decoration: none;
     font-weight: bold;
     color: #93B1C6;
     margin: 1.0em auto 1.0em auto;
 }
 
-
-
-/* Content */
-
-#content {
-    padding: 1em;
-    margin-left: 20%;
-
-}
-
-#content h1, h2, h3 {
-    color: #93B1C6;
-}
-
-
-/* Temporaneo, per visualizzazione paragrafi */
-#content h2, h3 {
-    margin-top: 1.0em;
-    margin-bottom: 0.5em;
-}
-#content h1 {
-    margin-bottom: 0.5em;
+.news img {
+	max-width: 100%;
+	/* da usare per risoluzione cell min-width: 100px; */
 }
 
 
@@ -148,12 +179,14 @@ body {
 
 /* Footer */
 
-#footer {
-    background-color: #C7D0D5;
-    color: #F5F5F5;
-    padding: 0.5em;
-    text-align: center;
+.footer {
+	padding: 0.7em;
+	text-align: center;
+	background-color: #668284;
 }
 
-
- 
+.footer p {
+	font-size: 0.9em;
+	text-transform: uppercase;
+	color: #FFF;
+}
