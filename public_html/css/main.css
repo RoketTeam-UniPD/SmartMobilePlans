@@ -126,75 +126,39 @@ h4 {
 	border-bottom: 1px solid #93B1C6;
 	border-top: 1px solid #93B1C6;
 	background-color: #FFF;
+	padding: 2em;
 }
 
-
-
-
-/* Content */
-
-.content {
-	float: left;
-	padding: 1.5em 2em 1.5em 2em;
-	width: 66%;
-	overflow: hidden;
-}
-@media screen and (max-width: 768px) {
-	.content {
-		width: auto;
-		float: left;
-	}
-}
-
-
-.content h2 {
+.container h2 {
 	margin-bottom: 0.5em;
 }
 
-.content p {
+.container p {
 	margin-bottom: 1.5em;
 }
 
-
-
-/* News vertical */
-/* da aggiungere dopo una dim minima deve andare in fondo alla pagina */
-.news {
-	padding: 1.5em 2em 1.5em 1em;
-	float: right;
-	width: 150px;
-}
-
-.news ul {
+.container ul {
 	list-style-type: none;
 }
 
-.news li {
+.container li {
     border-bottom: 1px solid #C7D0D5;
     margin: 1.4em auto 1.4em auto;
 }
 
 
-.news a {
+.container a {
     text-decoration: none;
     font-weight: bold;
     color: #93B1C6;
     margin: 1.0em auto 1.0em auto;
 }
 
-.news img {
-	max-width: 100%;
-	/* da usare per risoluzione cell min-width: 100px; */
+.container img { 
+    float: left; 
+    margin: 4px;
+    max-width: 120px;
 }
-/* da rivere dimensioni*/
-@media screen and (max-width: 768px) {
-	.news {
-		width: 100%;
-		float: left;
-	}
-}
-
-
 
 
 /* Footer */
