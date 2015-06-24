@@ -7,7 +7,6 @@
 }
 
 body {
-	width: 80%;
 	max-width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
@@ -17,7 +16,6 @@ body {
 	background-color:rgba(199,199,199,1);
 	background-image: url("../images/bg.png");
 }
-
 
 
 
@@ -98,6 +96,7 @@ h4 {
 	}
 	.menu li a {
 		width: 100%;
+		padding: 0.4em;
 	}
 }
 
@@ -111,7 +110,12 @@ h4 {
 	color: #FFF;
 	background-color: #2A2829;
 }
-
+/* da rivere dimensioni*/
+@media screen and (max-width: 600px) {
+	.breadcrumbs {
+		padding: 0.4em;
+	}
+}
 
 
 
@@ -130,9 +134,10 @@ h4 {
 /* Content */
 
 .content {
+	border: 1px solid red;
 	float: left;
-	width: 70%;
 	padding: 1.5em 1em 1.5em 2em;
+	width: 66%;
 }
 
 .content h2 {
@@ -148,8 +153,10 @@ h4 {
 /* News vertical */
 /* da aggiungere dopo una dim minima deve andare in fondo alla pagina */
 .news {
+	border: 1px solid black;
 	padding: 1.5em 2em 1.5em 1em;
-	overflow: hidden;
+	float: right;
+	width: 150px;
 }
 
 .news ul {
@@ -172,6 +179,13 @@ h4 {
 .news img {
 	max-width: 100%;
 	/* da usare per risoluzione cell min-width: 100px; */
+}
+/* da rivere dimensioni*/
+@media screen and (max-width: 600px) {
+	.news {
+		width: 100%;
+		float: left;
+	}
 }
 
 
