@@ -1,5 +1,6 @@
-/* General page style */
+/* http://google.github.io/styleguide/htmlcssguide.xml#CSS_Style_Rules */
 
+/* General page style */
 * {
 	border: 0;
 	margin: 0;
@@ -8,7 +9,7 @@
 
 html {
 	background-color: #C7C7C7;
-	background-color:rgba(199,199,199,1);
+	background-color: rgba(199, 199, 199, 1);
 	background-image: url("../images/bg.png");
 }
 
@@ -18,15 +19,13 @@ body {
 	max-width: 1024px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0px;
+	padding: 0;
 	font-size: 1em;
 }
 
-
-
 /* General font style */
 h1 {
-	font-size:1.5em;
+	font-size: 1.5em;
 	text-transform: uppercase;
 	font-weight: normal;
 	color: #2A2829;
@@ -40,26 +39,24 @@ h2 {
 }
 
 h3 {
-	font-size: 0.95em;
+	font-size: .95em;
 	text-transform: uppercase;
 	font-weight: normal;
 	color: #668284;
 }
 
 p {
-	font-size: 0.95em;
+	font-size: .95em;
 	font-weight: normal;
 	color: #000;
 }
-
-
 
 /* Header */
 .header {
 	padding-top: 1.25em;
 	padding-bottom: 1.25em;
 	text-align: center;
-	background-color: white;
+	background-color: #FFF;
 }
 
 .header h1 {
@@ -67,56 +64,61 @@ p {
 	font-weight: bold;
 }
 
-@media screen and (max-width: 640px) {
-	.header h1 {font-size: 1.5em;}
-	.header h2 {font-size: 0.8em;}
+@media screen and (max-width:640px) {
+	.header h1 {
+		font-size: 1.5em;
+	}
+
+	.header h2 {
+		font-size: .8em;
+	}
+
 }
-
-
 
 /* Main Menu */
 .menu ul {
-	padding-left: 0;
-	margin-left: 0;
 	background-color: #668284;
-	color: white;
+	color: #FFF;
 	float: left;
-	width: 100%;
 	font-size: 1.1em;
-	font-weight: normal;
+	font-weight: bold;
+	width: 100%;
 }
 
-.menu ul li {
+.menu li {
 	display: inline;
 }
 
-.menu ul li a {
-	padding: 0.2em 0.5em;
+.menu li a {
 	background-color: #668284;
-	color: white;
-	text-decoration: none;
-	float:left;
+	color: #FFF;
+	padding: .25em .5em;
+	float: left;
 }
 
-.menu ul li a:hover {
+.menu li a:hover {
 	background-color: #2A2829;
 	color: #fff;
 }
 
-.menu ul li a.active {
+.menu li a.active {
 	background-color: #2A2829;
 	color: #fff;
 }
 
-@media screen and (max-width: 640px) {
-
-	.menu ul li {
+@media only screen and (max-width:480px) {
+	.menu li {
 		display: block;
 	}
 
-	.menu ul li a {
+	.menu li a {
+		display: block;
+		float: none;
 		width: 100%;
-		float:left;
+		border-bottom: .1em solid #2A2829;
+		text-align: center;
+		padding: .25em 0;
+		margin: 0;
 	}
 }
 
@@ -131,23 +133,22 @@ p {
 .breadcrumbs p {
 	color: #FFF;
 	font-weight: normal;
-	font-size: 0.9em;
+	font-size: .9em;
 }
-
 
 /* News */
 .news {
 	background-color: #FFF;
 	float: right;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	width: 35%;
 }
 
 .news h3 {
-	font-size: 0.9em;
 	color: #000;
-	padding-bottom: 0.25em;
+	font-size: 0.9em;
+	padding-bottom: .25em;
 }
 
 .news li {
@@ -155,49 +156,45 @@ p {
 	padding-bottom: 1.25em;
 }
 
-@media (max-width: 1024px) {
+@media only screen and (max-width:480px) {
 	.news {
 		clear: both;
 		width: auto;
 		float: none;
 	}
+
 }
-
-
 
 /* Content */
 .content {
 	background-color: #FFF;
 	float: left;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	width: 65%;
 }
 
-@media (max-width: 1024px) {
- 	.content {
-  		float: none;
+@media only screen and (max-width:1024px) {
+	.content {
+		float: none;
 		width: auto;
 	}
 }
-
 
 .space {
 	padding: 20px 30px 0px 30px;
 }
 
-
-
 /* Footer */
 .footer {
-	clear: both;
-	padding: 0.5em;
-	text-align: center;
 	background-color: #668284;
+	clear: both;
+	padding: .5em;
+	text-align: center;
 }
 
 .footer p {
-	font-size: 0.9em;
-	text-transform: uppercase;
 	color: #FFF;
+	font-size: .9em;
+	text-transform: uppercase;
 }
