@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<operator xmlns:xs="http://www.w3.org/2001/XMLSchema" name="Vodafone" logo="upload/vodafone/logo.png">
+
+	<plan payments="rechargeable">
+		<title>Flexi Start</title>
+		<insertdate>2015-07-08</insertdate>
+		<inserttime>14:54:01</inserttime>
+		<available disabled="false">
+			<startdate>2015-07-08</startdate>
+			<enddate>2015-10-30</enddate>
+		</available>
+		<price currency="€">10.00</price>
+		<expiry unit="week">4</expiry>
+		<image>upload/vodafone/flexi_start.jpg</image>
+		<rates>
+			<minutes>400</minutes>
+			<messages>100</messages>
+			<internet datasize="MB">100</internet>
+		</rates>
+		<description>Con Vodafone Flexi Start ogni 4 settimane hai 400 minuti verso tutti i numeri nazionali, 100 SMS verso tutti e 100MB di Internet alla velocità del 4G. Vodafone Flexi Start costa 10€ ogni 4 settimane e si rinnova in automatico.</description>
+	</plan>
+
+	<plan payments="subscription">
+		<title>RELAX</title>
+		<insertdate>2015-07-09</insertdate>
+		<inserttime>00:59:31</inserttime>
+		<available disabled="false">
+			<startdate>2015-07-09</startdate>
+			<enddate>2015-12-31</enddate>
+		</available>
+		<price currency="€">34.00</price>
+		<expiry unit="week">4</expiry>
+		<image>upload/vodafone/relax.jpg</image>
+		<rates>
+			<minutes>Unlimited</minutes>
+			<messages>Unlimited</messages>
+			<internet datasize="GB">3</internet>
+		</rates>
+		<description>Servizio RELAX
+			Con tutti i piani RELAX hai incluso un servizio esclusivo.
+			Solo per te un Servizio Clienti dedicato con accesso all'operatore, disponibile 24 ore al giorno, 7 giorni su 7.
+			Smart Passport
+			Per i tuoi viaggi all’estero hai già attive:
+			Smart Passport Europa, USA e Canada con minuti, sms e internet illimitato in Europa , USA e Canada a 3€ al giorno solo in caso di effettivo utilizzo.
+			Smart Passport Resto del Mondo: con 50 minuti (25 in + 25 out), 50 SMS (25 in + 25 out) e 50 MB a 6€ al giorno solo in caso di effettivo utilizzo.
+			Con Smart Passport già attiva hai minuti, SMS e Internet illimitati, validi in Europa, USA e Canada per il tuo Smartphone a 3 euro al giorno solo nei giorni di effettivo utilizzo. Verifica le tariffe nella sezione Estero.
+			Vodafone Rete Sicura
+			Con Vodafone Rete Sicura puoi connetterti ad Internet con maggiore sicurezza e proteggere i tuoi dati, i tuoi pagamenti online e la navigazione dei tuoi figli. Vodafone Rete Sicura è inclusa gratuitamente per un anno.
+			E' possibile disattivare in ogni momento Vodafone Rete Sicura dal 190 Fai da Te o chiamando il 42071.
+		</description>
+	</plan>
+
+</operator>
