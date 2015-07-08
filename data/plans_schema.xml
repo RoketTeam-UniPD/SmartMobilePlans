@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0">
+
+	<xs:element name="operator">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="plan">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="title" type="xs:string"/>
+							<xs:element name="insertdate" type="xs:date"/>
+							<xs:element name="inserttime" type="xs:time"/>
+							<xs:element name="available">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="startdate" type="xs:date"/>
+										<xs:element name="enddate" type="xs:date"/>
+									</xs:sequence>
+									<xs:attribute name="disabled" type="xs:boolean"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="price">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:float">
+											<xs:attribute name="currency">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="€"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="expiry">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:integer">
+											<xs:attribute name="unit">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:enumeration value="day"/>
+														<xs:enumeration value="week"/>
+														<xs:enumeration value="month"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:attribute>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="image" type="xs:string"/>
+
+							<xs:element name="rates">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="minutes" type="xs:string" minOccurs="0"/>
+										<xs:element name="messages" type="xs:string" minOccurs="0"/>
+										<xs:element name="internet" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:byte">
+														<xs:attribute name="datasize">
+															<xs:simpleType>
+																<xs:restriction base="xs:string">
+																	<xs:enumeration value="MB"/>
+																	<xs:enumeration value="GB"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="description" type="xs:string"/>
+						</xs:sequence>
+						<xs:attribute name="payments">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="rechargeable"/>
+									<xs:enumeration value="subscription"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+			<xs:attribute name="logo" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
