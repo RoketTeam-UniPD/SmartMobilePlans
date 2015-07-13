@@ -9,7 +9,7 @@
 			<startdate>2015-07-08</startdate>
 			<enddate>2015-10-30</enddate>
 		</available>
-		<price currency="€">10.00</price>
+		<price currency="euro">10.00</price>
 		<expiry unit="week">4</expiry>
 		<image>upload/vodafone/flexi_start.jpg</image>
 		<rates>
@@ -28,7 +28,7 @@
 			<startdate>2015-07-09</startdate>
 			<enddate>2015-12-31</enddate>
 		</available>
-		<price currency="€">34.00</price>
+		<price currency="euro">34.00</price>
 		<expiry unit="week">4</expiry>
 		<image>upload/vodafone/relax.jpg</image>
 		<rates>
