@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<useropinions xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <comment idref="id-01">
+    <description>ho trovato la promozione adatta in un attimo</description>
+    <insertdatetime>2015-07-11T08:31:25+01:00</insertdatetime>
+  </comment>
+
+  <comment idref="id-02">
+    <description>mi fa schifo. State fregando la genete con questo sito</description>
+    <insertdatetime>2015-08-15T10:18:25+05:00</insertdatetime>
+  </comment>
+
+  <rate idref="id-01">  
+    <score>3</score>
+    <insertdatetime>2015-08-16T23:38:25+01:00</insertdatetime>
+  </rate>
+
+  <comment idref="id-01">
+    <description>mi fa schifo. State fregando la genete con questo sito</description>
+    <insertdatetime>2015-08-16T23:38:25+01:00</insertdatetime>
+  </comment>
+
+  <rate idref="id-01">  
+    <score>1</score>
+    <insertdatetime>2015-08-17T08:38:25+01:00</insertdatetime>
+  </rate>
+
+  <rate idref="id-02">  
+    <score>5</score>
+    <insertdatetime>2015-08-22T08:38:25+01:00</insertdatetime>
+  </rate>
+
+</useropinions>

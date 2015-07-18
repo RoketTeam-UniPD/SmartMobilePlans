@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0">
+
+  <xs:element name="plans" type="plansType"/>
+
+  <xs:complexType name="plansType">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="vodafone" type="planType"/>
+      <xs:element name="tim" type="planType"/>
+      <xs:element name="tre" type="planType"/>
+      <xs:element name="wind" type="planType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="planType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="insertdatetime" type="xs:dateTime"/>
+      <xs:element name="available" type="availableType"/>
+      <xs:element name="price" type="priceType"/>
+      <xs:element name="expiry" type="expiryType"/>
+      <xs:element name="rates" type="ratesType"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="payments" type="paymentsType" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="availableType">
+    <xs:sequence>
+      <xs:element name="startdate" type="xs:date"/>
+      <xs:element name="enddate" type="xs:date"/>
+    </xs:sequence>
+    <xs:attribute name="disabled" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="priceType">
+    <xs:simpleContent>
+      <xs:extension base="xs:float">
+        <xs:attribute name="currency" type="currencyType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="currencyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="euro"/>
+      <xs:enumeration value="dollar"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="expiryType">
+    <xs:simpleContent>
+      <xs:extension base="xs:byte">
+        <xs:attribute name="unit" type="unitType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="unitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="day"/>
+      <xs:enumeration value="week"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ratesType">
+    <xs:sequence>
+      <xs:element name="minutes" type="xs:string"/>
+      <xs:element name="messages" type="xs:string"/>
+      <xs:element name="internet" type="internetType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="internetType">
+    <xs:simpleContent>
+      <xs:extension base="xs:byte">
+        <xs:attribute name="datasize" type="datasizeType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="datasizeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MB"/>
+      <xs:enumeration value="GB"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="paymentsType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="rechargeable"/>
+      <xs:enumeration value="subscription"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
