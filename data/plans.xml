@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plans xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="plans.xsd" >
+
   <vodafone xml:id="id-1" payments="rechargeable">
     <title>Flexi Start</title>
     <insertdatetime>2015-07-08T12:38:25+01:00</insertdatetime>
@@ -50,4 +51,5 @@
     </rates>
     <description>Con TIM Special Voce chiami tutti e i tuoi minuti non scadono! Quelli che non consumi, li usi nei rinnovi successivi, quando vuoi.</description>
   </tim>
+
 </plans>
