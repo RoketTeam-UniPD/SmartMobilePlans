@@ -4,34 +4,42 @@ use strict;
 use utf8;
 use warnings;
 
-use Data::Dumper;
+use CGI;
 use HTML::Entities;
 use Template;
 use XML::LibXML;
-use CGI;
 
-my $filename = '../data/plans.xml';
 
+# Declarations and parse of XML file document
 my $parser = XML::LibXML->new(no_blanks => 1);
-my $doc = $parser->parse_file($filename);
+my $doc = $parser->parse_file('../data/plans.xml');
 
+
+# Declarations and retreive the id over GET
 my $cgi = CGI->new();
-my $name = $cgi->param('id');
+my $id = $cgi->param('id');
 
-my $node = $doc->getElementById("$name");
 
-if ($node == ""){
-  print $cgi->header( -type => "text/html", charset => 'utf-8', -status => "404 Not Found" );
-  print $cgi->start_html;
+# Get element from id
+my $node = $doc->getElementById("$id");
+
+
+# If not find redirect to error page, else inizialized web page
+if (!defined $node){
+  print $cgi->redirect('../404.html');
+  exit;
 }else{
   print $cgi->header( -type => "text/html", charset => 'utf-8', -status => "200 OK" );
   print $cgi->start_html;
 }
+
+
+# Convert text from XML to HTML Entity names
 my $desc = $node->findvalue('description');
 my $txt = encode_entities($desc);
 
 
-my $file = 'prova.tpl';
+# Fill var to send an template file
 my $vars = {
   operator        => $node->getName(),
   id              => $node->findvalue('@xml:id'),
@@ -53,6 +61,12 @@ my $vars = {
 };
 
 
+# Create istance of template and declare file to use
 my $template = Template->new();
-$template->process($file, $vars) || die "Template process failed: ", $template->error(), "\n";
+my $template_file = 'plan.tt';
+
+# Process vars in to template file
+$template->process($template_file, $vars) || die "Template process failed: ", $template->error(), "\n";
+
+# Close end HTML page
 print $cgi->end_html;
