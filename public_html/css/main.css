@@ -149,6 +149,17 @@ p {
 	width: 65%;
 }
 
+/* Content */
+.content2 {
+	background-color: #FFF;
+	margin: 0;
+	padding: 0;
+	width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 @media only screen and (max-width:1024px) {
 	.content {
 		float: none;
@@ -157,7 +168,7 @@ p {
 }
 
 #welcome {
-	padding: 2em;
+	padding: 1em;
 }
 
 
@@ -197,6 +208,70 @@ p {
 	padding: 2em;
 }
 
+
+/* Tariffe*/
+
+.tariffa{
+	border: 1px solid gray;
+	padding: .2em;
+	margin: .2em;
+	left: 0px;
+	clear: both;
+	margin-bottom: 1em;
+}
+.info{
+	overflow: hidden;
+	border: 1px solid gray;
+	margin: .2em;
+	height: 100%;
+}
+
+
+.info2{
+	overflow: hidden;
+	border: none;
+	height: 100%;
+	text-align: center;
+	line-height:100%;
+}
+
+.info2 span{
+	padding: 1em;
+}
+
+.prezzo{
+	border: 1px solid gray;
+	margin: .2em;
+	float: right;
+	height: inherit;
+    vertical-align: center;
+    padding: 0.5em;
+}
+
+.prezzo.h3{
+	font-size: 2em;
+}
+
+.more{
+	border: 1px solid gray;
+	margin: .2em;
+	text-align: center;
+	vertical-align: center;
+}
+
+.more2{
+	border: 1px solid gray;
+	margin: .2em;
+	vertical-align: center;
+}
+
+.logo{
+	float:left;
+	padding: 0.2em;
+}
+.logo img{
+	width: 9em;
+}
 
 /* Footer */
 .footer {
