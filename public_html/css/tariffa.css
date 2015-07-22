@@ -1,0 +1,351 @@
+/* General page style */
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #C7C7C7;
+	background-color: rgba(199, 199, 199, 1);
+	background-image: url("../images/bg.png");
+}
+
+body {
+	background-color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	font-size: 1em;
+}
+
+
+/* General font style */
+h1 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #2A2829;
+}
+
+h2 {
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #668284;
+}
+
+h3 {
+	font-size: .95em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #668284;
+}
+
+p {
+	font-size: .95em;
+	font-weight: normal;
+	color: #000;
+}
+
+
+/* Header */
+.header {
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
+	text-align: center;
+	background-color: #FFF;
+}
+
+.header h1 {
+	font-size: 1.9em;
+	font-weight: bold;
+}
+
+@media screen and (max-width:640px) {
+	.header h1 {
+		font-size: 1.5em;
+	}
+
+	.header h2 {
+		font-size: .8em;
+	}
+}
+
+.content img{
+  padding-top: 3em;
+  margin-left: 1em;
+}
+
+.immagine {text-align: center;}
+
+/* Main Menu */
+.menu ul {
+	background-color: #668284;
+	color: #FFF;
+	float: left;
+	font-size: 1.1em;
+	font-weight: normal;
+	width: 100%;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu li a {
+	background-color: #668284;
+	color: #FFF;
+	padding: .25em .4em;
+	float: left;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	background-color: #2A2829;
+	color: #fff;
+}
+
+.menu li a.active {
+	background-color: #2A2829;
+	color: #fff;
+}
+
+@media only screen and (max-width:480px) {
+	.menu li {
+		display: block;
+	}
+
+	.menu li a {
+		border-bottom: .1em solid #2A2829;
+		display: block;
+		float: none;
+		margin: 0;
+		padding: .25em 0;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+
+/* Breadcrumbs */
+.breadcrumbs {
+	clear: both;
+	padding: 0.25em 0.5em;
+	color: #FFF;
+	background-color: #2A2829;
+}
+
+.breadcrumbs p {
+	color: #FFF;
+	font-weight: normal;
+	font-size: .9em;
+}
+
+
+
+/* Content */
+.content {
+	background-color: #FFF;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: auto;
+}
+
+@media only screen and (max-width:1024px) {
+	.content {
+		float: none;
+		width: 100%;
+	}
+}
+
+#welcome {
+	padding: 2em;
+}
+
+
+/* News */
+.news {
+	background-color: #FFF;
+	float: right;
+	margin: 0;
+	padding: 0;
+	width: 35%;
+}
+
+.news h3 {
+	color: #000;
+	font-size: 0.9em;
+	padding-bottom: .25em;
+}
+
+.news ul {
+	margin-top: 1.25em;
+}
+
+.news li {
+	list-style-type: none;
+	padding-bottom: 1.25em;
+}
+
+@media only screen and (max-width:1024px) {
+	.news {
+		clear: both;
+		width: 100%;
+		float: left;
+	}
+}
+
+#latest_news{
+	padding: 2em;
+}
+
+
+/* Footer */
+.footer {
+	background-color: #668284;
+	clear: both;
+	padding: .5em;
+	text-align: center;
+}
+
+.footer p {
+	color: #FFF;
+	font-size: .9em;
+}
+
+/**************** main *******************/
+.main h1,.dettagli h2, #commenti h2{
+  background-color: grey;
+  color: #FFF;
+  font-variant: small-caps;
+  padding: 0.3em;
+  text-align: center;
+  margin: 1em;
+}
+
+
+/**************** scheda *******************/
+
+.scheda dt {
+  font-weight: bold;
+  float: left;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-size: 45px;
+}
+.scheda dd {
+  margin-left:300px;
+  margin-left:300px;
+  border-bottom: 1px dotted #009;
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+.scheda #trama {
+	text-align: justify;
+	clear: both;
+}
+
+.scheda dl{
+  padding: 1em;
+}
+
+
+/**************** dettagli *******************/
+.dettagli dt {
+  font-weight: bold;
+  float: left;
+  font-size: 20px;
+  text-transform: uppercase;
+  
+}
+.dettagli dd {
+  margin-left:300px;
+  border-bottom: 1px dotted #009;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+
+/**************** commento *******************/
+
+.commento{
+  margin: 0 auto;
+  width: auto;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+#commenti .comment-header {
+	font-size: 60%;
+	text-align: right;
+	margin-bottom: .5em;
+	font-style: italic;
+}
+
+#commenti .comment-body {
+	background-color: #EEE;
+	padding: 1em;
+}
+/**************** form contatto *******************/
+form {
+  margin: 0 auto;
+  width: auto;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    /* To give a little highlight on active elements */
+    border-color: #000;
+}
+
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* To give enough room to type some text */
+    height: 5em;
+
+    /* To allow users to resize any textarea vertically
+       It does not work on every browsers */
+    resize: vertical;
+}
+
+.button {
+    /* To position the buttons to the same position of the text fields */
+    padding-left: 90px; /* same size as the label elements */
+}
+button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: .5em;
+}
