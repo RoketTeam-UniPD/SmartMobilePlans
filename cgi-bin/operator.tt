@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>TIM - Smart Mobile Plans</title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+		<meta name="keywords" content="struttura, tatiffe telefoniche css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="../css/main.css" media="all"/>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+
+		<!-- Start Header -->
+		<div class="header">
+			<h1>Smart Mobile Plans</h1>
+			<h2>Choosing a mobile phone plan has never been this simple!</h2>
+		</div> <!-- End Header -->
+
+
+		<!-- Start Menu -->
+		<div class="menu">
+			<ul>
+				<li><a href="../index.html" title="Home">HOME</a></li>
+				<li><a href="../news.html">NEWS</a></li>
+				<li><a href="../cgi-bin/operator.pl?name=tim">TIM</a></li>
+				<li><a href="../cgi-bin/operator.pl?name=vodafone">VODAFONE</a></li>
+				<li><a href="../cgi-bin/operator.pl?name=tre">TRE</a></li>
+				<li><a href="../cgi-bin/operator.pl?name=wind">WIND</a></li>
+				<li><a href="../about.html">ABOUT</a></li>
+			</ul>
+		</div> <!-- End Menu -->
+
+
+		<!-- Start Breadcrumbs -->
+		<div class="breadcrumbs">
+			<p>You are in: <a title="Tim">TIM</a></p>
+		</div> <!-- End Breadcrumbs -->
+
+
+		<!-- Start Container -->
+		<div class="fullcontent">
+			<div id="welcome">
+				<h1>Tariffe TIM</h1>
+			</div>
+
+			<dl class="operator">
+
+				[% FOREACH p = plans %]
+				<dt>[% p.title %]</dt>
+				<dd>
+					<img src="../images/logo_[% p.operator %].png"/>
+					<h2>Detail:</h2>	
+					<ul>
+						<li>Call: <b>[% p.minutes %] minutes</b></li>
+						<li>Messages: <b>[% p.messages %] sms</b></li>
+						<li>Internet: <b>[% p.internet %] [% p.datasize %]</b></li>
+					</ul> 
+					<a href="#">Scopri ...</a>
+				</dd>
+				[% END %]
+
+			</dl>
+
+		</div> <!-- End Container -->
+
+
+		<!-- Start Footer -->
+		<div class="footer">
+			<p><a href="#" >Admin Area</a> | Copyright &copy; 2015 NomeGruppo</p>
+		</div> <!-- End Footer -->
+
+	</body>
+
+</html>
