@@ -149,19 +149,21 @@ p {
 	width: 65%;
 }
 
-/* Content */
-.content2 {
+.fullcontent {
 	background-color: #FFF;
+	float: left;
 	margin: 0;
 	padding: 0;
-	width: 80%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
 }
 
 @media only screen and (max-width:1024px) {
 	.content {
+		float: none;
+		width: 100%;
+	}
+
+	.fullcontent {
 		float: none;
 		width: 100%;
 	}
@@ -209,70 +211,6 @@ p {
 }
 
 
-/* Tariffe*/
-
-.tariffa{
-	border: 1px solid gray;
-	padding: .2em;
-	margin: .2em;
-	left: 0px;
-	clear: both;
-	margin-bottom: 1em;
-}
-.info{
-	overflow: hidden;
-	border: 1px solid gray;
-	margin: .2em;
-	height: 100%;
-}
-
-
-.info2{
-	overflow: hidden;
-	border: none;
-	height: 100%;
-	text-align: center;
-	line-height:100%;
-}
-
-.info2 span{
-	padding: 1em;
-}
-
-.prezzo{
-	border: 1px solid gray;
-	margin: .2em;
-	float: right;
-	height: inherit;
-    vertical-align: center;
-    padding: 0.5em;
-}
-
-.prezzo.h3{
-	font-size: 2em;
-}
-
-.more{
-	border: 1px solid gray;
-	margin: .2em;
-	text-align: center;
-	vertical-align: center;
-}
-
-.more2{
-	border: 1px solid gray;
-	margin: .2em;
-	vertical-align: center;
-}
-
-.logo{
-	float:left;
-	padding: 0.2em;
-}
-.logo img{
-	width: 9em;
-}
-
 /* Footer */
 .footer {
 	background-color: #668284;
@@ -284,4 +222,71 @@ p {
 .footer p {
 	color: #FFF;
 	font-size: .9em;
+}
+
+/********************************************
+				   OPERATOR
+*********************************************/
+
+dl.operator {
+	width: 70%;
+	margin: auto;
+}
+
+@media only screen and (max-width:800px) {
+	dl.operator {
+		width: 95%;
+		margin: auto;
+		text-align: center;
+	}
+}
+
+.operator dt {
+	background-color: #668284;
+	border: .1em dashed #2A2829;
+	color: #FFF;
+	padding: .25em .25em .25em 1em;
+
+}
+
+.operator dd {
+	background-color: none;
+	border: .1em dashed #2A2829;
+	border-top: none;
+	color: #000;
+	margin:0 0 2em 0;
+	padding: 1em 2em;
+}
+
+
+.operator dd li {
+	list-style-position: inside;
+	list-style-type: square;
+	margin-left: 1em;
+	text-align: left;
+}
+
+
+.operator dd img {
+	float: right;
+	margin: 1em;
+	max-height: 50px;
+	padding: 0;
+}
+
+@media only screen and (max-width:800px) {
+	.operator dd img {
+		float: none;
+		margin: 1em;
+		max-height: 50px;
+		padding: 0;
+	}
+}
+
+.operator dd a {
+	margin:0 0 0 1em;
+}
+
+.operator dd h2 {
+	text-align: left;
 }
