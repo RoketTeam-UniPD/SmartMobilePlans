@@ -6,7 +6,7 @@
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 		<meta name="keywords" content="struttura, tatiffe telefoniche css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" type="text/css" href="../css/main.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
 	</head>
 
@@ -22,20 +22,38 @@
 		<!-- Start Menu -->
 		<div class="menu">
 			<ul>
-				<li><a href="../index.html" title="Home">HOME</a></li>
-				<li><a href="../news.html">NEWS</a></li>
-				<li><a href="../cgi-bin/operator.pl?name=tim">TIM</a></li>
-				<li><a href="../cgi-bin/operator.pl?name=vodafone">VODAFONE</a></li>
-				<li><a href="../cgi-bin/operator.pl?name=tre">TRE</a></li>
-				<li><a href="../cgi-bin/operator.pl?name=wind">WIND</a></li>
-				<li><a href="../about.html">ABOUT</a></li>
+				<li><a href="home.cgi" title="Home">HOME</a></li>
+				[% IF plans.first.operator == 'tim' %]
+					<li><a href="#"  class="active">TIM</a></li>
+				[% ELSE %]
+					<li><a href="operator.cgi?name=tim">TIM</a></li>
+				[% END %]
+
+				[% IF plans.first.operator == 'vodafone' %]
+					<li><a href="#"  class="active">VODAFONE</a></li>
+				[% ELSE %]
+					<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
+				[% END %]
+
+				[% IF plans.first.operator == 'tre' %]
+					<li><a href="#"  class="active">TRE</a></li>
+				[% ELSE %]
+					<li><a href="operator.cgi?name=tre">TRE</a></li>
+				[% END %]
+
+				[% IF plans.first.operator == 'wind' %]
+					<li><a href="#"  class="active">WIND</a></li>
+				[% ELSE %]
+					<li><a href="operator.cgi?name=wind">WIND</a></li>
+				[% END %]
+				<li><a href="about.html">ABOUT</a></li>
 			</ul>
 		</div> <!-- End Menu -->
 
 
 		<!-- Start Breadcrumbs -->
 		<div class="breadcrumbs">
-			<p>You are in: <a title="Tim">TIM</a></p>
+			<p>You are in: <a title="[% plans.first.operator FILTER ucfirst %]">[% plans.first.operator FILTER upper %]</a></p>
 		</div> <!-- End Breadcrumbs -->
 
 

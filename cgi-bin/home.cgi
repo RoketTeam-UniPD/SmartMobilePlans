@@ -33,6 +33,8 @@ foreach my $node ($doc->findnodes("/plans/child::*[position() < 6]")){
 	push(@plans, $plan);
 }
 
+# TODO: order elements by date DESC
+
 my %data = (plans => \@plans);
 
 

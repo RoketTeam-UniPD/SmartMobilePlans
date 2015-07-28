@@ -51,7 +51,7 @@ my %data = (plans => \@plans);
 
 
 my $template = Template->new();
-my $template_file = 'operator.tt';
+my $template_file = 'templates/operator.tt';
 
 $template->process($template_file, \%data) || die "Template process failed: ", $template->error(), "\n";
 

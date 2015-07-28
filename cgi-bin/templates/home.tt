@@ -4,7 +4,7 @@
 	<head>
 		<title>Home - Smart Mobile Plans</title>
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-		<meta name="keywords" content="struttura, tatiffe telefoniche css"/>
+		<meta name="keywords" content=""/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
@@ -23,11 +23,10 @@
 		<div class="menu">
 			<ul>
 				<li><a class="active" href="#" title="Home">HOME</a></li>
-				<li><a href="news.html">NEWS</a></li>
-				<li><a href="tim.html">TIM</a></li>
-				<li><a href="vodafone.html">VODAFONE</a></li>
-				<li><a href="tre.html">TRE</a></li>
-				<li><a href="wind.html">WIND</a></li>
+				<li><a href="operator.cgi?name=tim">TIM</a></li>
+				<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
+				<li><a href="operator.cgi?name=tre">TRE</a></li>
+				<li><a href="operator.cgi?name=wind">WIND</a></li>
 				<li><a href="about.html">ABOUT</a></li>
 			</ul>
 		</div> <!-- End Menu -->
@@ -67,7 +66,7 @@
 
 		<!-- Start Footer -->
 		<div class="footer">
-			<p><a href="#" >Admin Area</a> | Copyright &copy; 2015 NomeGruppo</p>
+			<p><a href="#" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
 		</div> <!-- End Footer -->
 
 	</body>
