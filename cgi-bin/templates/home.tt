@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Home - Smart Mobile Plans</title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+		<meta name="keywords" content="struttura, tatiffe telefoniche css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+
+		<!-- Start Header -->
+		<div class="header">
+			<h1>Smart Mobile Plans</h1>
+			<h2>Choosing a mobile phone plan has never been this simple!</h2>
+		</div> <!-- End Header -->
+
+
+		<!-- Start Menu -->
+		<div class="menu">
+			<ul>
+				<li><a class="active" href="#" title="Home">HOME</a></li>
+				<li><a href="news.html">NEWS</a></li>
+				<li><a href="tim.html">TIM</a></li>
+				<li><a href="vodafone.html">VODAFONE</a></li>
+				<li><a href="tre.html">TRE</a></li>
+				<li><a href="wind.html">WIND</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+			</ul>
+		</div> <!-- End Menu -->
+
+
+		<!-- Start Breadcrumbs -->
+		<div class="breadcrumbs">
+			<p>You are in: <a title="Home" xml:lang="en">HOME</a>
+		</div> <!-- End Breadcrumbs -->
+
+
+		<!-- Start Container -->
+		<div class="content">
+			<div id="welcome">
+				<h1>Welcome</h1>
+				<p>In this site in raggruppate the major plans of mobile bla bla .... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div> <!-- End Container -->
+
+		<!-- Start News -->
+		<div class="news">
+			<div id="latest_news">
+				<h1>Latest News</h1>
+				<ul>
+					[% FOREACH p = plans %]
+					<li>
+						<h2>[% p.title %]</h2>
+						<h3>[% p.insertdatetime %]</h3>
+						<p>[% p.description %] <a href="">read more..</a></p>
+					</li>
+					[% END %]
+				</ul>
+			</div>
+		</div> <!-- End News -->
+
+
+
+		<!-- Start Footer -->
+		<div class="footer">
+			<p><a href="#" >Admin Area</a> | Copyright &copy; 2015 NomeGruppo</p>
+		</div> <!-- End Footer -->
+
+	</body>
+
+</html>
