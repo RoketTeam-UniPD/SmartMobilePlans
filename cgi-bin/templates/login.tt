@@ -39,28 +39,17 @@
 
 
 		<!-- Start Container -->
-		<div class="content">
-			<div id="welcome">
-				<h1>Welcome</h1>
-				<p>In this site in raggruppate the major plans of mobile bla bla .... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<div class="login-area">
+			<h3>Admin area login: </h3>
+			<div class="form-bg">
+				<form class='login-form' method='post' action='admin.cgi' >
+					<p>Username: <input type='text' name='username' /></p>
+					<p>Password: <input type='text' name='pwd' /></p>
+
+					<input type='submit' name='Submit' value='Submit' />
+				</form>
 			</div>
 		</div> <!-- End Container -->
-
-		<!-- Start News -->
-		<div class="news">
-			<div id="latest_news">
-				<h1>Latest News</h1>
-				<ul>
-					[% FOREACH p = plans %]
-					<li>
-						<h2>[% p.title %]</h2>
-						<h3>[% p.insertdatetime %]</h3>
-						<p>[% p.description %] <a href="">read more..</a></p>
-					</li>
-					[% END %]
-				</ul>
-			</div>
-		</div> <!-- End News -->
 
 
 		<div class="footer">

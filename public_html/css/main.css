@@ -290,3 +290,23 @@ dl.operator {
 .operator dd h2 {
 	text-align: left;
 }
+
+/********************************************
+				   ADMIN + LOGIN
+*********************************************/
+
+/* TODO: cambiare il css sottostante, scritto solo per test login */
+
+.login-area {
+	text-align: center;
+	margin: 2em ;
+}
+
+.form-bg {
+	padding: 2em;
+	background-color: #668284;
+}
+
+.login-form p {
+	color: white;
+}

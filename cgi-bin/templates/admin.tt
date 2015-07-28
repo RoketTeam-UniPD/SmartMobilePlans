@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Admin - Smart Mobile Plans</title>
+		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+		<meta name="keywords" content=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+
+		<!-- Start Header -->
+		<div class="header">
+			<h1>Smart Mobile Plans</h1>
+			<h2>Choosing a mobile phone plan has never been this simple!</h2>
+		</div> <!-- End Header -->
+
+
+		<!-- Start Menu -->
+		<div class="menu">
+			<ul>
+				<li><a href="home.cgi" title="Home">HOME</a></li>
+				<li><a href="operator.cgi?name=tim">TIM</a></li>
+				<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
+				<li><a href="operator.cgi?name=tre">TRE</a></li>
+				<li><a href="operator.cgi?name=wind">WIND</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+			</ul>
+		</div> <!-- End Menu -->
+
+
+		<!-- Start Breadcrumbs -->
+		<div class="breadcrumbs">
+			<p>You are in: <a title="Admin Area" xml:lang="en">ADMIN AREA</a>
+		</div> <!-- End Breadcrumbs -->
+
+
+		<!-- Start Container -->
+		<div class="content">
+			<h1>Hi, [% username %]! Welcome the the Admin Area!</h1>
+		</div> <!-- End Container -->
+
+
+
+		<!-- Start Footer -->
+		<div class="footer">
+			<p><a href="#" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
+		</div> <!-- End Footer -->
+
+	</body>
+
+</html>

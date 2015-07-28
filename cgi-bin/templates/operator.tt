@@ -60,7 +60,7 @@
 		<!-- Start Container -->
 		<div class="fullcontent">
 			<div id="welcome">
-				<h1>Tariffe TIM</h1>
+				<h1>Tariffe [% plans.first.operator FILTER upper %]</h1>
 			</div>
 
 			<dl class="operator">
@@ -82,11 +82,9 @@
 			</dl>
 
 		</div> <!-- End Container -->
-
-
-		<!-- Start Footer -->
+		
 		<div class="footer">
-			<p><a href="#" >Admin Area</a> | Copyright &copy; 2015 NomeGruppo</p>
+			<p><a href="login.cgi" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
 		</div> <!-- End Footer -->
 
 	</body>
