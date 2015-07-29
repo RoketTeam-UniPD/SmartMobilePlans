@@ -3,7 +3,7 @@
 
   <admin idref="id-01">
     <username>admin</username>
-    <password>admin</password>
+    <password>pwd</password>
   </admin>
 
   <admin idref="id-02">

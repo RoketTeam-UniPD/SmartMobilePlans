@@ -12,7 +12,7 @@ use XML::LibXML;
 
 # Declarations and parse of XML file document
 my $parser = XML::LibXML->new(no_blanks => 1);
-my $doc = $parser->parse_file('../data/plans.xml');
+my $doc = $parser->parse_file('../../data/plans.xml');
 
 
 # Declarations and retreive the id over GET
@@ -63,7 +63,7 @@ my $vars = {
 
 # Create istance of template and declare file to use
 my $template = Template->new();
-my $template_file = 'plan.tt';
+my $template_file = 'templates/plan.tt';
 
 # Process vars in to template file
 $template->process($template_file, $vars) || die "Template process failed: ", $template->error(), "\n";
