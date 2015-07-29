@@ -22,7 +22,7 @@
 		<!-- Start Menu -->
 		<div class="menu">
 			<ul>
-				<li><a class="active" href="#" title="Home">HOME</a></li>
+				<li><a href="home.cgi" title="Home">HOME</a></li>
 				<li><a href="operator.cgi?name=tim">TIM</a></li>
 				<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
 				<li><a href="operator.cgi?name=tre">TRE</a></li>
@@ -34,7 +34,7 @@
 
 		<!-- Start Breadcrumbs -->
 		<div class="breadcrumbs">
-			<p>You are in: <a title="Home" xml:lang="en">HOME</a>
+			<p>You are in: <a title="Login" xml:lang="en">LOGIN</a>
 		</div> <!-- End Breadcrumbs -->
 
 
@@ -45,9 +45,14 @@
 				<form class='login-form' method='post' action='admin.cgi' >
 					<p>Username: <input type='text' name='username' /></p>
 					<p>Password: <input type='password' name='pwd' /></p>
-
 					<input type='submit' name='Submit' value='Submit' />
 				</form>
+				[% IF error == 'usr' %]
+					<p class="error">Entered username does not exists</p>
+				[% END %]
+				[% IF error == 'pwd' %]
+					<p class="error">Entered password is incorrect</p>
+				[% END %]
 			</div>
 		</div> <!-- End Container -->
 

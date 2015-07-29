@@ -310,3 +310,8 @@ dl.operator {
 .login-form p {
 	color: white;
 }
+
+.form-bg .error {
+	font-weight: bold;
+	color: #B80000;
+}
