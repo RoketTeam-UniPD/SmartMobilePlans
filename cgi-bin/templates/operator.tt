@@ -1,92 +1,92 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>TIM - Smart Mobile Plans</title>
-		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-		<meta name="keywords" content="struttura, tatiffe telefoniche css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
-	</head>
+<head>
+	<title>TIM - Smart Mobile Plans</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+	<meta name="keywords" content="struttura, tatiffe telefoniche css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+</head>
 
-	<body>
+<body>
 
-		<!-- Start Header -->
-		<div class="header">
-			<h1>Smart Mobile Plans</h1>
-			<h2>Choosing a mobile phone plan has never been this simple!</h2>
-		</div> <!-- End Header -->
-
-
-		<!-- Start Menu -->
-		<div class="menu">
-			<ul>
-				<li><a href="home.cgi" title="Home">HOME</a></li>
-				[% IF plans.first.operator == 'tim' %]
-					<li><a href="#"  class="active">TIM</a></li>
-				[% ELSE %]
-					<li><a href="operator.cgi?name=tim">TIM</a></li>
-				[% END %]
-
-				[% IF plans.first.operator == 'vodafone' %]
-					<li><a href="#"  class="active">VODAFONE</a></li>
-				[% ELSE %]
-					<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
-				[% END %]
-
-				[% IF plans.first.operator == 'tre' %]
-					<li><a href="#"  class="active">TRE</a></li>
-				[% ELSE %]
-					<li><a href="operator.cgi?name=tre">TRE</a></li>
-				[% END %]
-
-				[% IF plans.first.operator == 'wind' %]
-					<li><a href="#"  class="active">WIND</a></li>
-				[% ELSE %]
-					<li><a href="operator.cgi?name=wind">WIND</a></li>
-				[% END %]
-				<li><a href="about.html">ABOUT</a></li>
-			</ul>
-		</div> <!-- End Menu -->
+	<!-- Start Header -->
+	<div class="header">
+		<h1>Smart Mobile Plans</h1>
+		<h2>Choosing a mobile phone plan has never been this simple!</h2>
+	</div> <!-- End Header -->
 
 
-		<!-- Start Breadcrumbs -->
-		<div class="breadcrumbs">
-			<p>You are in: <a title="[% plans.first.operator FILTER ucfirst %]">[% plans.first.operator FILTER upper %]</a></p>
-		</div> <!-- End Breadcrumbs -->
+	<!-- Start Menu -->
+	<div class="menu">
+		<ul>
+			<li><a href="home.cgi" title="Home">HOME</a></li>
+			[% IF plans.first.operator == 'tim' %]
+			<li><a href="#"  class="active">TIM</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=tim">TIM</a></li>
+			[% END %]
+
+			[% IF plans.first.operator == 'vodafone' %]
+			<li><a href="#"  class="active">VODAFONE</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
+			[% END %]
+
+			[% IF plans.first.operator == 'tre' %]
+			<li><a href="#"  class="active">TRE</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=tre">TRE</a></li>
+			[% END %]
+
+			[% IF plans.first.operator == 'wind' %]
+			<li><a href="#"  class="active">WIND</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=wind">WIND</a></li>
+			[% END %]
+			<li><a href="about.html">ABOUT</a></li>
+		</ul>
+	</div> <!-- End Menu -->
 
 
-		<!-- Start Container -->
-		<div class="fullcontent">
-			<div id="welcome">
-				<h1>Tariffe [% plans.first.operator FILTER upper %]</h1>
-			</div>
+	<!-- Start Breadcrumbs -->
+	<div class="breadcrumbs">
+		<p>You are in: <a title="[% plans.first.operator FILTER ucfirst %]">[% plans.first.operator FILTER upper %]</a></p>
+	</div> <!-- End Breadcrumbs -->
 
-			<dl class="operator">
 
-				[% FOREACH p = plans %]
-				<dt>[% p.title %]</dt>
-				<dd>
-					<img src="../images/logo_[% p.operator %].png"/>
-					<h2>Detail:</h2>	
-					<ul>
-						<li>Call: <b>[% p.minutes %] minutes</b></li>
-						<li>Messages: <b>[% p.messages %] sms</b></li>
-						<li>Internet: <b>[% p.internet %] [% p.datasize %]</b></li>
-					</ul> 
-					<a href="#">Scopri ...</a>
-				</dd>
-				[% END %]
+	<!-- Start Container -->
+	<div class="fullcontent">
+		<div id="welcome">
+			<h1>Tariffe [% plans.first.operator FILTER upper %]</h1>
+		</div>
 
-			</dl>
+		<dl class="operator">
 
-		</div> <!-- End Container -->
-		
-		<div class="footer">
-			<p><a href="login.cgi" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
-		</div> <!-- End Footer -->
+			[% FOREACH p = plans %]
+			<dt>[% p.title %]</dt>
+			<dd>
+				<img src="../images/logo_[% p.operator %].png"/>
+				<h2>Detail:</h2>	
+				<ul>
+					<li>Call: <b>[% p.minutes %] minutes</b></li>
+					<li>Messages: <b>[% p.messages %] sms</b></li>
+					<li>Internet: <b>[% p.internet %] [% p.datasize %]</b></li>
+				</ul> 
+				<a href="#">Scopri ...</a>
+			</dd>
+			[% END %]
 
-	</body>
+		</dl>
+
+	</div> <!-- End Container -->
+	
+	<div class="footer">
+		<p><a href="login.cgi" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
+	</div> <!-- End Footer -->
+
+</body>
 
 </html>
