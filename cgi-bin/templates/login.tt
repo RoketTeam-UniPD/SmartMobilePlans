@@ -39,10 +39,10 @@
 
 
 		<!-- Start Container -->
-		<div class="login-area">
+		<div class="form-area">
 			<h3>Admin area login: </h3>
 			<div class="form-bg">
-				<form class='login-form' method='post' action='admin.cgi' >
+				<form class='general-form' method='post' action='admin.cgi' >
 					<p>Username: <input type='text' name='username' /></p>
 					<p>Password: <input type='password' name='pwd' /></p>
 					<input type='submit' name='Submit' value='Submit' />

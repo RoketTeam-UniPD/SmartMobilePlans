@@ -297,7 +297,7 @@ dl.operator {
 
 /* TODO: cambiare il css sottostante, scritto solo per test login */
 
-.login-area {
+.form-area {
 	text-align: center;
 	margin: 2em ;
 }
@@ -307,7 +307,7 @@ dl.operator {
 	background-color: #668284;
 }
 
-.login-form p {
+.general-form, .general-form p {
 	color: white;
 }
 
