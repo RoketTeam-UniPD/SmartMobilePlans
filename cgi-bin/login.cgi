@@ -4,14 +4,9 @@ use strict;
 use utf8;
 use warnings;
 
-use Data::Dumper;
 use Template;
-use XML::LibXML;
 use CGI;
 use CGI::Session;
-
-my $parser = XML::LibXML->new();
-my $doc = $parser->parse_file('../data/plans.xml');
 
 
 my $cgi = CGI->new();

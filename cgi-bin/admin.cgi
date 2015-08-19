@@ -24,8 +24,8 @@ my $username;
 if ($session->param('user') ne undef) {
 	$username = $session->param('user');
 } else {	
-	$username = "admin";#$cgi->param('username');
-	my $pwd = 'pwd';#$cgi->param('pwd');
+	$username = $cgi->param('username');
+	my $pwd = $cgi->param('pwd');
 
 	my $admin = $doc->findnodes("//admin[username='" . $username . "']");
 

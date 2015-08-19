@@ -79,7 +79,7 @@
 
 	<!-- Start Footer -->
 	<div class="footer">
-		<p><a href="#" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
+		<p><a href="logout.cgi">Logout</a> | Copyright &copy; 2015 RocketTeam</p>
 	</div> <!-- End Footer -->
 
 </body>
