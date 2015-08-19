@@ -4,6 +4,7 @@ use strict;
 use utf8;
 use warnings;
 
+use CGI::Session;
 use Data::Dumper;
 use Template;
 use XML::LibXML;
@@ -16,21 +17,34 @@ my $doc = $parser->parse_file('../data/admins.xml');
 
 
 my $cgi = CGI->new();
-my $username = $cgi->param('username');
-my $pwd = $cgi->param('pwd');
+my $session = CGI::Session->load();
 
+my $username;
 
-my $admin = $doc->findnodes("//admin[username='" . $username . "']");
+if ($session->param('user') ne undef) {
+	$username = $session->param('user');
+} else {	
+	$username = "admin";#$cgi->param('username');
+	my $pwd = 'pwd';#$cgi->param('pwd');
 
-if (!$admin) {
-	print $cgi->redirect('login.cgi?e=usr');
-} else {
-	my $password = $admin->pop()->findvalue("./password");
-	
-	if ($password ne $pwd) {
-		print $cgi->redirect('login.cgi?e=pwd');
-	}
-} 
+	my $admin = $doc->findnodes("//admin[username='" . $username . "']");
+
+	if (!$admin) {
+		print $cgi->redirect('login.cgi?e=usr');
+	} else {
+		my $password = $admin->pop()->findvalue("./password");
+		
+		if ($password ne $pwd) {
+			print $cgi->redirect('login.cgi?e=pwd');
+		}
+
+		# User exists, initialize session
+		my $session = CGI::Session->new();
+		$session->param('user', $username);
+		print $session->header(-location=>"admin.cgi");
+	} 
+}
+
 
 print $cgi->header( -type => "text/html", charset => 'utf-8', -status => "200 OK" );
 print $cgi->start_html;
