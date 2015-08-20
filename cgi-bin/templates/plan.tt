@@ -1,17 +1,92 @@
-<b>operator</b>: [% operator %]<br />
-<b>id</b>: [% id %]<br />
-<b>payments</b>: [% payments %]<br />
-<b>title</b>: [% title %]<br />
-<b>insertdatetime</b>: [% insertdatetime %]<br />
-<b>available</b>: [% available %]<br />
-<b>startdate</b>: [% startdate %]<br />
-<b>enddate</b>: [% enddate %]<br />
-<b>price</b>: [% price %]<br />
-<b>currency</b>: [% currency %]<br />
-<b>unit</b>: [% unit %]<br />
-<b>expiry</b>: [% expiry %]<br />
-<b>minutes</b>: [% minutes %]<br />
-<b>messages</b>: [% messages %]<br />
-<b>datasize</b>: [% datasize %]<br />
-<b>internet</b>: [% internet %]<br />
-<b>description</b>: [% description %]<br />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>TIM - Smart Mobile Plans</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+	<meta name="keywords" content="struttura, tatiffe telefoniche css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+	<!-- Start Header -->
+	<div class="header">
+		<h1>Smart Mobile Plans</h1>
+		<h2>Choosing a mobile phone plan has never been this simple!</h2>
+	</div> <!-- End Header -->
+
+
+	<!-- Start Menu -->
+	<div class="menu">
+		<ul>
+			<li><a href="home.cgi" title="Home">HOME</a></li>
+			[% IF plans.first.operator == 'tim' %]
+			<li><a href="#"  class="active">TIM</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=tim">TIM</a></li>
+			[% END %]
+
+			[% IF plans.first.operator == 'vodafone' %]
+			<li><a href="#"  class="active">VODAFONE</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
+			[% END %]
+
+			[% IF plans.first.operator == 'tre' %]
+			<li><a href="#"  class="active">TRE</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=tre">TRE</a></li>
+			[% END %]
+
+			[% IF plans.first.operator == 'wind' %]
+			<li><a href="#"  class="active">WIND</a></li>
+			[% ELSE %]
+			<li><a href="operator.cgi?name=wind">WIND</a></li>
+			[% END %]
+			<li><a href="about.html">ABOUT</a></li>
+		</ul>
+	</div> <!-- End Menu -->
+
+
+	<!-- Start Breadcrumbs -->
+	<div class="breadcrumbs">
+		<p>You are in: <a title="[% TODO %]">[% operator FILTER upper %] \ [% title FILTER upper %] </a></p>
+	</div> <!-- End Breadcrumbs -->	
+
+
+	<!-- Start Container -->
+	<div class="fullcontent">
+		
+		<div class="plan">
+
+			<img src="../images/logo_[% operator %].png"/>
+
+			<dl>
+				<dt>Title: </dt><dd>[% title %]</dd>
+				<dt>Payments: </dt><dd>[% payments %]</dd>
+				<dt>Available: </dt><dd>[% available %] (from: [% startdate %] to: [% enddate %])</dd>
+				<dt>Price: </dt><dd>[% price %] [% currency %]</dd>
+				<dt>Expiry: </dt><dd>[% expiry %] [% unit %]</dd>
+				<dt>Call: </dt><dd>[% minutes %] minutes</dd>
+				<dt>Messages: </dt><dd>[% messages %] SMS</dd>
+				<dt>Internet: </dt><dd>[% internet %] [% datasize %]</dd>
+			</dl>
+			
+			<p>Note: [% description %]</p>
+			<p>Offert created at : [% insertdatetime %]</p>
+		
+		</div>
+
+	</div> <!-- End Container -->
+
+	
+	<div class="footer">
+		<p><a href="login.cgi" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
+	</div> <!-- End Footer -->
+
+</body>
+
+</html>

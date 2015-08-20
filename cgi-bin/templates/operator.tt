@@ -60,7 +60,7 @@
 	<!-- Start Container -->
 	<div class="fullcontent">
 		<div id="welcome">
-			<h1>Tariffe [% plans.first.operator FILTER upper %]</h1>
+			<h1>[% plans.first.operator %]'s plans</h1>
 		</div>
 
 		<dl class="operator">
@@ -75,7 +75,7 @@
 					<li>Messages: <b>[% p.messages %] sms</b></li>
 					<li>Internet: <b>[% p.internet %] [% p.datasize %]</b></li>
 				</ul> 
-				<a href="#">Scopri ...</a>
+				<a href="plan.cgi?id=[% p.id %]">Read ...</a>
 			</dd>
 			[% END %]
 

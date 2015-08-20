@@ -291,6 +291,51 @@ dl.operator {
 	text-align: left;
 }
 
+
+/********************************************
+				   PLAN
+*********************************************/
+
+.plan {
+	width: 60%;
+	margin: auto;
+}
+
+.plan img {
+	display: block;
+	margin: auto;
+	margin-top: 2em;
+}
+
+.plan dl {
+	margin: 2em auto;
+}
+ 
+.plan dt {
+	float:left; 
+	font-weight:bold; 
+	margin-right: 2em; 
+	padding: .25em 0;	
+	width: 5em; 
+}
+ 
+.plan dd {
+	margin: .25em 0; 
+	padding: .25em 0;
+}
+
+.plan p {
+	font-size: .85em;
+	margin: 2em auto;
+}
+
+@media only screen and (max-width:800px) {
+	.plan {
+		width: 95%;
+		margin: auto;
+	}
+}
+
 /********************************************
 				   ADMIN + LOGIN
 *********************************************/

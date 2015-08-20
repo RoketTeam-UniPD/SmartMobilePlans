@@ -12,7 +12,7 @@ use XML::LibXML;
 
 # Declarations and parse of XML file document
 my $parser = XML::LibXML->new(no_blanks => 1);
-my $doc = $parser->parse_file('../../data/plans.xml');
+my $doc = $parser->parse_file('../data/plans.xml');
 
 
 # Declarations and retreive the id over GET
