@@ -33,16 +33,21 @@ sub validateSchema {
 	}
 
 	return "";
-}
+}	
 
 
 sub generateID {
-	my $node = $_[1]->findnodes('(//admin)[last()]');
-	my $idref = $node->pop()->getAttribute("idref");
+	my $nodes = $_[0]->findnodes('(//*[@xml:id])[last()]');
+	my $idref = $nodes->pop()->getAttribute("xml:id");
 	$idref =~ s/(\d+)$/$1 + 1/e;
 	
 	return $idref; 
 
+}
+
+
+sub generateDate {
+	return $_[0] . "-" . $_[1]  . "-" - $_[2];
 }
 
 1;

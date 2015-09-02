@@ -1,39 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <admins xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <admin idref="id-1">
+  <admin xml:id="id-1">
     <username>admin</username>
     <password>pwd</password>
   </admin>
-  <admin idref="id-2">
+  <admin xml:id="id-2">
     <username>user</username>
     <password>root</password>
-  </admin>
-  <admin idref="id-3">
-    <username>cusi</username>
-    <password>cusiqwe</password>
-  </admin>
-  <admin idref="id-4">
-    <username>cusi</username>
-    <password>cusiqwe</password>
-  </admin>
-  <admin idref="id-5">
-    <username>cusi</username>
-    <password>cusiqwe</password>
-  </admin>
-  <admin idref="id-6">
-    <username>cusi</username>
-    <password>cusiqwe</password>
-  </admin>
-  <admin idref="id-7">
-    <username>cusi</username>
-    <password>cusiqwe</password>
-  </admin>
-  <admin idref="id-8">
-    <username>cusi</username>
-    <password>cusiqwe</password>
-  </admin>
-  <admin idref="id-9">
-    <username>cusi</username>
-    <password>cusiqwe</password>
   </admin>
 </admins>

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plans xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="plans.xsd" >
-
+<plans xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="plans.xsd">
   <vodafone xml:id="id-1" payments="rechargeable">
     <title>Flexi Start</title>
     <insertdatetime>2015-07-08T12:38:25+01:00</insertdatetime>
-    <available disabled="false">
+    <available>
       <startdate>2015-07-08</startdate>
       <enddate>2015-10-30</enddate>
     </available>
@@ -17,7 +16,6 @@
     </rates>
     <description>Con Vodafone Flexi Start ogni 4 settimane hai 400 minuti verso tutti i numeri nazionali, 100 SMS verso tutti e 100MB di Internet alla velocità del 4G. Vodafone Flexi Start costa 10€ ogni 4 settimane e si rinnova in automatico.</description>
   </vodafone>
-
   <vodafone xml:id="id-2" payments="subscription">
     <title>RELAX</title>
     <insertdatetime>2015-07-09T18:38:25+01:00</insertdatetime>
@@ -34,7 +32,6 @@
     </rates>
     <description>Servizio RELAX. Con tutti i piani RELAX hai incluso un servizio esclusivo.</description>
   </vodafone>
-
   <tim xml:id="id-3" payments="subscription">
     <title>TIM SPECIAL VOCE</title>
     <insertdatetime>2015-07-18T09:50:00+01:00</insertdatetime>
@@ -51,5 +48,4 @@
     </rates>
     <description>Con TIM Special Voce chiami tutti e i tuoi minuti non scadono! Quelli che non consumi, li usi nei rinnovi successivi, quando vuoi.</description>
   </tim>
-
 </plans>

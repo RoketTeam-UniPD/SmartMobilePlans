@@ -31,7 +31,6 @@
       <xs:element name="startdate" type="xs:date"/>
       <xs:element name="enddate" type="xs:date"/>
     </xs:sequence>
-    <xs:attribute name="disabled" type="xs:boolean" use="required"/>
   </xs:complexType>
 
   <xs:complexType name="priceType">

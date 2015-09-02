@@ -28,7 +28,7 @@ if ($pwd ne $pwdc) {
 my $admin  = $doc->getDocumentElement;
 
 my $node = XML::LibXML::Element->new('admin');
-$node->setAttribute('idref', SUB::generateID('admin', $doc));
+$node->setAttribute('idref', SUB::generateID($doc));
 
 my $u = XML::LibXML::Element->new('username');
 $u->appendText($username);
