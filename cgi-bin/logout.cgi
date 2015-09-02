@@ -4,6 +4,7 @@ use strict;
 use utf8;
 use warnings;
 
+use SUB;
 use Template;
 use CGI;
 use CGI::Session;
@@ -11,9 +12,6 @@ use CGI::Session;
 
 my $cgi = CGI->new();
 
-my $session = CGI::Session->load();
-$session->close();
-$session->delete();
-$session->flush();
+SUB::closeSession();
 
 print $cgi->redirect('home.cgi');

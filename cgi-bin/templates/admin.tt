@@ -45,7 +45,7 @@
 			<div class="form-bg">
 				<h4>Add a new plan: </h4>
 				<form class='general-form' method='post' action='admin.cgi'>
-					operator: 
+					Operator: 
 					<select>
 						<option value="wind">Wind</option>
 						<option value="vodafone">Vodafone</option>
@@ -70,6 +70,16 @@
 					Internet: <input type='text' name='internet' /><br />
 					Description: <textarea name='description' ></textarea><br />
 					<input type='submit' name='Submit' value='Submit plan' />
+				</form>
+			</div>
+
+			<div class="form-bg">
+				<h4>Add a new admin: </h4>
+				<form class='general-form' method='post' action='adminReq.cgi'>
+					Username: <input type='text' name='username' /><br />
+					Password: <input type='password' name='pwd' /><br />
+					Confirm password: <input type='password' name='pwd-confirm' /><br />
+					<input type='submit' name='Submit' value='Submit admin' />
 				</form>
 			</div>
 		</div>

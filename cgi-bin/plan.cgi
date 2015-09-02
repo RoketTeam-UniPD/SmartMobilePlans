@@ -5,9 +5,10 @@ use utf8;
 use warnings;
 
 use CGI;
-use HTML::Entities;
+use Data::Dumper;
 use Template;
 use XML::LibXML;
+use LWP::UserAgent;
 
 
 # Declarations and parse of XML file document
