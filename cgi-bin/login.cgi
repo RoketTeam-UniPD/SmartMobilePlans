@@ -17,12 +17,10 @@ if ($session->param('user') ne undef) {
 }
 
 print $cgi->header( -type => "text/html", charset => 'utf-8', -status => "200 OK" );
-print $cgi->start_html;
+
 
 
 my $template = Template->new();
 my $template_file = 'templates/login.tt';
 
 $template->process($template_file, { error => $cgi->param('e') }) || die "Template process failed: ", $template->error(), "\n";
-
-print $cgi->end_html;

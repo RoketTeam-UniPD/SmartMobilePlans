@@ -40,28 +40,44 @@
 
 	<!-- Start Container -->
 	<div class="content">
-		<div class="form-area">
-			<h3>Hi, [% username %]! Welcome the the Admin Area!</h3>
-			<div class="form-bg">
-				<h4>Add a new plan: </h4>
-				<form class='general-form' method='post' action='planReq.cgi'>
-					Operator: 
-					<select name="operator">
+		<div id="admin">
+
+			<h1>Hi, [% username %]! Welcome the the Admin Area!</h1>
+
+
+			<form id="adminForm" method="post" action="planReq.cgi" enctype="multipart/form-data">
+			<h2>Add a new plan: </h2>
+			<p>Il seguente form permette l'inserimento di una nuova tariffa. Completa tutti i campi per un corretto inserimento.</p>
+
+				<p>
+					<label for="operator">Operator:</label>
+					<!-- <input tabindex="TODO" name="username" type="text" id="username" /> -->
+					<select name="operator" id="operator">
 						<option value="wind">Wind</option>
 						<option value="vodafone">Vodafone</option>
 						<option value="tre">Tre</option>
 						<option value="tim">Tim</option>
 					</select>
-					<br />
-					Payments: 
-					<select name='payments'>
+				</p>
+
+
+				<p>
+					<label for="payments">Payments:</label>
+					<select name="payments" id="payments">
 						<option value="rechargeable">Rechargeable</option>
 						<option value="subscription">Subscription</option>
 					</select>
-					<br />
-					Title: <input type='text' name='title' /><br />
-					Start Date: Day
-					<select name="sday">
+				</p>
+
+				<p>
+					<label for="title">Title:</label>
+					<input tabindex="TODO" name="title" type="text" id="title" />
+				</p>
+
+				<p>
+					<label for="sday">Start date:</label>
+					Day
+					<select name="sday" id="sday">
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
@@ -94,6 +110,7 @@
 						<option value="30">31</option>
 						<option value="30">31</option>
 					</select>
+
 					Month:
 					<select name="smonth">
 						<option value="1">1</option>
@@ -109,6 +126,7 @@
 						<option value="11">11</option>
 						<option value="12">12</option>
 					</select>
+
 					Year
 					<select name="syear">
 						<option value="2015">2015</option>
@@ -118,8 +136,12 @@
 						<option value="2019">2019</option>
 						<option value="2020">2020</option>
 					</select>
-					<br />
-					End Date: Day
+				</p>
+
+				<p>
+					<label for="eday">End date:</label>
+					
+					Day
 					<select name="eday">
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -153,6 +175,7 @@
 						<option value="30">31</option>
 						<option value="30">31</option>
 					</select>
+
 					Month:
 					<select name="emonth">
 						<option value="1">1</option>
@@ -168,6 +191,7 @@
 						<option value="11">11</option>
 						<option value="12">12</option>
 					</select>
+
 					Year
 					<select name="eyear">
 						<option value="2015">2015</option>
@@ -177,45 +201,81 @@
 						<option value="2019">2019</option>
 						<option value="2020">2020</option>
 					</select>
-					<br />
-					Price: <input type='text' name='price' /><br />
+				</p>
+
+				<p>
+					<label for="price">Price:</label>
+					<input type="text" name="price" id="price"/>
 					Currency:
-					<select name="currency">
+					<select name="currency" id="currency">
 						<option value="euro">Euro</option>
 						<option value="pounds">Pounds</option>
 						<option value="US dollars">US Dollars</option>
 					</select>
-					<br />
-					Unit: 
-					<select name="unit">
+				</p>
+
+				<p>
+					<label for="currency">Expiry:</label>
+					<input type="text" name="expiry" id="expiry"/>
+					Unit:
+					<select name="unit" id="unit">
 						<option value="day">Day</option>
 						<option value="week">Week</option>
 						<option value="month">Month</option>
 					</select>
-					<br />
-					Expiry: <input type='text' name='expiry' /><br />
-					Minutes: <input type='text' name='minutes' /><br />
-					Messages: <input type='text' name='messages' /><br />
-					Data Size: 
-					<select name="datasize">
+				</p>
+
+				<p>
+					<label for="minutes">Minutes:</label>
+					<input type="text" name="minutes" id="minutes"/>
+				</p>
+
+				<p>
+					<label for="minutes">Messages:</label>
+					<input type="text" name="messages" id="messages"/>
+				</p>
+
+				<p>
+					<label for="internet">Internet: </label>
+					<input type="text" name="internet"/>
+					Data size:
+					<select name="datasize" id="datasize">
 						<option value="MB">MB</option>
 						<option value="GB">GB</option>
 					</select>
-					Internet: <input type='text' name='internet' /><br />
-					Description: <textarea name='description' ></textarea><br />
-					<input type='submit' name='Submit' value='Submit plan' />
-				</form>
-			</div>
+				</p>
 
-			<div class="form-bg">
-				<h4>Add a new admin: </h4>
-				<form class='general-form' method='post' action='adminReq.cgi'>
-					Username: <input type='text' name='username' /><br />
-					Password: <input type='password' name='pwd' /><br />
-					Confirm password: <input type='password' name='pwd-confirm' /><br />
-					<input type='submit' name='Submit' value='Submit admin' />
-				</form>
-			</div>
+				<p>
+					<label for="description">Description:</label>
+					<textarea name="description" id="description"></textarea>
+				</p>
+
+				<p>
+					<input type="submit" tabindex="TODO" name="Submit" value="Submit Plan" />
+				</p>
+			</form>
+
+
+			<form id="adminForm" method="post" action="adminReq.cgi" enctype="multipart/form-data">
+				<h2>Add a new admin:</h2>
+				<p>Il seguente form permette l'inserimento di un nuovo utente admin. Completa tutti i campi per un corretto inserimento.</p>
+				<p>
+					<label for="username">Username:</label>
+					<input type="text" name="username" id="username"/>
+				</p>
+				<p>
+					<label for="pwd">Password:</label>
+					<input type="password" name="pwd" id="pwd"/>
+				</p>
+				<p>
+					<label for="pwd-confirm">Confirm password:</label>
+					<input type="password" name="pwd-confirm" id="pwd-confirm"/>
+				</p>
+				<p>
+					<input type="submit" name="Submit" value="Submit Admin"/>
+				</p>
+			</form>
+
 		</div>
 	</div> <!-- End Container -->
 

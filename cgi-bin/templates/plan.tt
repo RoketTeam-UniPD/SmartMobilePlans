@@ -53,17 +53,18 @@
 
 	<!-- Start Breadcrumbs -->
 	<div class="breadcrumbs">
-		<p>You are in: <a title="[% TODO %]">[% operator FILTER upper %] \ [% title FILTER upper %] </a></p>
+		<p>You are in: <a title="[% TODO %]">[% operator FILTER upper %] / [% title FILTER upper %] </a></p>
 	</div> <!-- End Breadcrumbs -->	
 
 
 	<!-- Start Container -->
-	<div class="fullcontent">
+	<div class="content">
 		
 		<div class="plan">
 
 			<img src="../images/logo_[% operator %].png"/>
 
+			<h1>[% operator %] - [% title %]</h1>
 			<dl>
 				<dt>Title: </dt><dd>[% title %]</dd>
 				<dt>Payments: </dt><dd>[% payments %]</dd>
@@ -76,7 +77,7 @@
 			</dl>
 			
 			<p>Note: [% description %]</p>
-			<p>Offert created at : [% insertdatetime %]</p>
+			<p><em>Offert created at : [% insertdatetime %]</em></p>
 		
 		</div>
 

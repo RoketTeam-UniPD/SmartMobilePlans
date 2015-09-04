@@ -146,16 +146,10 @@ p {
 	float: left;
 	margin: 0;
 	padding: 0;
-	width: 65%;
+	width: 100%;
+
 }
 
-.fullcontent {
-	background-color: #FFF;
-	float: left;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-}
 
 @media only screen and (max-width:1024px) {
 	.content {
@@ -163,26 +157,42 @@ p {
 		width: 100%;
 	}
 
-	.fullcontent {
-		float: none;
-		width: 100%;
-	}
-}
-
-#welcome {
-	padding: 1em;
 }
 
 
-/* News */
+
+/* Footer */
+.footer {
+	background-color: #668284;
+	clear: both;
+	padding: .5em;
+	text-align: center;
+}
+
+.footer p {
+	color: #FFF;
+	font-size: .9em;
+}
+
+
+
+
+
+
+
+
+
+
+/********************************************
+				   INDEX
+*********************************************/
+.welcome {
+	margin: 2em;
+}
+
 .news {
-	background-color: #FFF;
-	float: right;
-	margin: 0;
-	padding: 0;
-	width: 35%;
+	margin: 2em;
 }
-
 .news h3 {
 	color: #000;
 	font-size: 0.9em;
@@ -206,30 +216,42 @@ p {
 	}
 }
 
-#latest_news{
-	padding: 2em;
-}
 
 
-/* Footer */
-.footer {
-	background-color: #668284;
-	clear: both;
-	padding: .5em;
-	text-align: center;
-}
 
-.footer p {
-	color: #FFF;
-	font-size: .9em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /********************************************
 				   OPERATOR
 *********************************************/
 
 dl.operator {
-	width: 70%;
+	width: 65%;
 	margin: auto;
 }
 
@@ -245,7 +267,7 @@ dl.operator {
 	background-color: #668284;
 	border: .1em dashed #2A2829;
 	color: #FFF;
-	padding: .25em .25em .25em 1em;
+	padding: .1em .25em .1em 1em;
 
 }
 
@@ -254,8 +276,8 @@ dl.operator {
 	border: .1em dashed #2A2829;
 	border-top: none;
 	color: #000;
-	margin:0 0 2em 0;
-	padding: 1em 2em;
+	margin:0 0 1em 0;
+	padding: .95em 2em;
 }
 
 
@@ -292,6 +314,21 @@ dl.operator {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********************************************
 				   PLAN
 *********************************************/
@@ -303,8 +340,7 @@ dl.operator {
 
 .plan img {
 	display: block;
-	margin: auto;
-	margin-top: 2em;
+	margin: 2em auto;
 }
 
 .plan dl {
@@ -326,7 +362,7 @@ dl.operator {
 
 .plan p {
 	font-size: .85em;
-	margin: 2em auto;
+	margin: 3.75em auto;
 }
 
 @media only screen and (max-width:800px) {
@@ -336,27 +372,67 @@ dl.operator {
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********************************************
 				   ADMIN + LOGIN
 *********************************************/
-
-/* TODO: cambiare il css sottostante, scritto solo per test login */
-
-.form-area {
+#admin{
+	margin: 2em;
+}
+#admin p#textError {
+	color: red;
 	text-align: center;
-	margin: 2em ;
+	margin: 5em 0;
 }
 
-.form-bg {
-	padding: 2em;
-	background-color: #668284;
+
+#adminForm {
+	text-align: left;
+	margin: 1em 0;
 }
 
-.general-form, .general-form p {
-	color: white;
+#adminForm label {
+	display: inline-block;
+    width: 10%;
 }
 
-.form-bg .error {
-	font-weight: bold;
-	color: #B80000;
+#adminForm input, select, textarea { 
+    border: .1em #2A2829 solid;
+    margin: .5em 0;
 }
+
+
+
+
+
+
+#loginForm {
+	text-align: center;
+	margin: 10em 0;
+}
+
+#loginForm input, select, textarea { 
+    border: .1em #2A2829 solid;
+    margin: .5em 0;
+}
+
+#loginForm label { 
+    display: inline-block;
+    width: 8em;
+    text-align: right;
+}
+

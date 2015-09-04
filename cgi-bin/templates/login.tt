@@ -34,26 +34,44 @@
 
 	<!-- Start Breadcrumbs -->
 	<div class="breadcrumbs">
-		<p>You are in: <a title="Login" xml:lang="en">LOGIN</a></p>
+		<p>You are in: <a title="Login">LOGIN</a></p>
 	</div> <!-- End Breadcrumbs -->
 
 
 	<!-- Start Container -->
-	<div class="form-area">
-		<h3>Admin area login: </h3>
-		<div class="form-bg">
-			<form class='general-form' method='post' action='admin.cgi' >
-				<p>Username: <input type='text' name='username' /></p>
-				<p>Password: <input type='password' name='pwd' /></p>
-				<input type='submit' name='Submit' value='Submit' />
+	<div class="content">
+
+		<div id="admin">
+			<h1>Admin area login: </h1>
+
+
+			<form id="loginForm" method="post" action="admin.cgi" enctype="multipart/form-data">
+				<p>
+					<label for="username">Username:</label>
+					<input tabindex="TODO" name="username" type="text" id="username" />
+				</p>
+				<p>
+					<label for="password">Password:</label>
+					<input tabindex="TODO" name="pwd" type="password" id="password" />
+				</p>
+				<p>
+					<input type="submit" tabindex="TODO" name="Submit" value="Submit" />
+				</p>
 			</form>
+
 			[% IF error == 'usr' %]
-			<p class="error">Entered username does not exists</p>
+			<p id="textError">Entered username does not exists !</p>
 			[% END %]
+
 			[% IF error == 'pwd' %]
-			<p class="error">Entered password is incorrect</p>
+			<p id="textError">Entered password is incorrect !</p>
 			[% END %]
+
+
+			<p><em>* per ottenere nuove login contattare l'amministrazione all'indirizzo roketteam@gmail.com</em></p>
 		</div>
+
+
 	</div> <!-- End Container -->
 
 

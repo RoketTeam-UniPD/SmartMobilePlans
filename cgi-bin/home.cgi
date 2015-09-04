@@ -25,6 +25,7 @@ foreach my $node ($doc->findnodes("/plans/child::*[position() < 6]")){
 
 	my $plan = {
 		# operator		=> $node->getName(),
+		id				=> $node->findvalue('@xml:id'),
 		title			=> $node->findvalue('title'),
 		insertdatetime	=> $node->findvalue('insertdatetime'),
 		description		=> $node->findvalue('description')

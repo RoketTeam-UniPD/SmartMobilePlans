@@ -58,8 +58,9 @@
 
 
 	<!-- Start Container -->
-	<div class="fullcontent">
-		<div id="welcome">
+	<div class="content">
+
+		<div class="welcome">
 			<h1>[% plans.first.operator %]'s plans</h1>
 		</div>
 

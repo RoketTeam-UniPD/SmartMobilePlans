@@ -9,6 +9,7 @@ use Data::Dumper;
 use Template;
 use XML::LibXML;
 use LWP::UserAgent;
+use HTML::Entities;
 
 
 # Declarations and parse of XML file document
