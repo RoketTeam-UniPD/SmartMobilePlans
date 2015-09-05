@@ -68,7 +68,7 @@
 			[% END %]
 
 
-			<p><em>* per ottenere nuove login contattare l'amministrazione all'indirizzo roketteam@gmail.com</em></p>
+			<p><em>* per ottenere nuove login contattare l'amministrazione all'indirizzo <a title="Admin email" href="mailto:roketteam.unipd@gmail.com">roketteam.unipd@gmail.com</a></em></p>
 		</div>
 
 
