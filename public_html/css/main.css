@@ -473,17 +473,15 @@ dl.operator {
 
 #loginForm {
 	text-align: center;
-	margin: 10em 0;
+	margin: 5em 0;
 }
 
 #loginForm input, select, textarea { 
     border: .1em #2A2829 solid;
-    margin: .5em 0;
+    margin: 1em 0;
 }
 
 #loginForm label { 
-    display: inline-block;
-    width: 8em;
-    text-align: right;
+    display: block;
 }
 
