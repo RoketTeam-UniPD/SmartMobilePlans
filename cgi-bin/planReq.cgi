@@ -35,6 +35,15 @@ my $datasize = $cgi->param('datasize');
 my $internet = $cgi->param('internet');
 my $description = $cgi->param('description');
 
+if (!$title or !$price or !$expiry or !$minutes or !$messages or !$internet or !$description) {
+	print $cgi->redirect('admin.cgi?e=plan-empty');  
+}
+
+my $plan = $doc->findnodes("//" . $operator . "[title='" . $title . "']");
+if ($plan) {
+	print $cgi->redirect('admin.cgi?e=plan-exists'); 
+}
+
 ## TEST
 # my $operator = "tre";
 # my $payments = "rechargable";

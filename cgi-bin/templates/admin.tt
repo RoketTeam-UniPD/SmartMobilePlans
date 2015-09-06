@@ -254,6 +254,12 @@
 					<input type="submit" tabindex="TODO" name="Submit" value="Submit Plan" />
 				</p>
 			</form>
+			[% IF error == 'plan-empty' %]
+			<p id="textError">One or more fields are empty!</p>
+			[% END %]
+			[% IF error == 'plan-exists' %]
+			<p id="textError">Entered title already exists for current operator!</p>
+			[% END %]
 
 
 			<form id="adminForm" method="post" action="adminReq.cgi" enctype="multipart/form-data">
@@ -275,6 +281,15 @@
 					<input type="submit" name="Submit" value="Submit Admin"/>
 				</p>
 			</form>
+			[% IF error == 'admin-usr' %]
+			<p id="textError">Entered username already exists!</p>
+			[% END %]
+			[% IF error == 'admin-pwd' %]
+			<p id="textError">Entered passwords does not match!</p>
+			[% END %]
+			[% IF error == 'admin-empty' %]
+			<p id="textError">One or more fields are empty!</p>
+			[% END %]
 
 		</div>
 	</div> <!-- End Container -->
