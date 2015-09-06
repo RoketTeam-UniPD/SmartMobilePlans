@@ -4,13 +4,13 @@ use strict;
 use utf8;
 use warnings;
 
+use CGI;
+use Template;
 use CGI::Session;
 use Data::Dumper;
-use Template;
 use XML::LibXML;
 use LWP::UserAgent;
-use CGI;
-
+use POSIX qw(strftime);
 
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file('../data/admins.xml');
@@ -45,7 +45,11 @@ if ($session->param('user') ne undef) {
 	} 
 }
 
-my %data = (username => $username, error => $cgi->param("e"));
+my %data = (
+	username => $username, 
+	error => $cgi->param("e"),
+	curYear => strftime "%Y", localtime
+);
 
 print $cgi->header( -type => "text/html", charset => 'utf-8', -status => "200 OK" );
 

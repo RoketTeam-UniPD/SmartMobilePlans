@@ -8,6 +8,7 @@ use CGI;
 use SUB;
 use HTML::Entities;
 use XML::LibXML;
+use POSIX qw(strftime);
 
 
 my $parser = XML::LibXML->new();
