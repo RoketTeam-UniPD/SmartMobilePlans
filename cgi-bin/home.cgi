@@ -9,9 +9,6 @@ use warnings;
 
 #importazioni librerie varie
 use CGI;
-use Data::Dumper;
-use DateTime::Format::Strptime;
-use DateTime::Format::ISO8601;
 use HTML::Entities;
 use Template;
 use XML::LibXML;
@@ -58,11 +55,9 @@ print SUB::printBreadcrumbsSITE(\@breadcrumbs);
 my @plans;
 
 
-foreach my $node ($doc->findnodes("/plans/child::*[position() < 6]")){
+foreach my $node ($doc->findnodes("/plans/child::*[position() > last()-5]")){
 
-    # Conversione per una data in formato più pretty
-    my $dt = DateTime::Format::ISO8601->parse_datetime($node->findvalue('insertdatetime'));
-    
+
     # Conversione per la visualizzazione corretta in HTML
     my $description = $node->findvalue('description');
     my $description = encode_entities($description);
@@ -70,16 +65,17 @@ foreach my $node ($doc->findnodes("/plans/child::*[position() < 6]")){
     my $plan = {
         id              => $node->findvalue('@xml:id'),
         title           => $node->findvalue('title'),
-        insertdatetime  => $dt,
-        insertdatetime  => $dt->strftime('%H:%M:%S %d-%m-%Y'),
+        insertdatetime  => $node->findvalue('insertdatetime'),
         description     => $description,
     };
 
     push(@plans, $plan);
 }
 
+my @reversePlans = reverse(@plans);
+
 # TODO: order elements by date DESC
-my %data = (plans => \@plans);
+my %data = (plans => \@reversePlans);
 
 
 # inizializzazione ed istanziazione del sitema di templating

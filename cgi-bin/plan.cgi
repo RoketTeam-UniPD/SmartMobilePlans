@@ -9,9 +9,6 @@ use warnings;
 
 #importazioni librerie varie
 use CGI;
-use Data::Dumper;
-use DateTime::Format::Strptime;
-use DateTime::Format::ISO8601;
 use HTML::Entities;
 use Template;
 use XML::LibXML;
@@ -49,7 +46,6 @@ my $plan = {
 	payments		=> $node->findvalue('@payments'),
 	title			=> $node->findvalue('title'),
 	insertdatetime	=> $node->findvalue('insertdatetime'),
-	available		=> $node->findvalue('available/@disabled'),
 	startdate		=> $node->findvalue('available/startdate'),
 	enddate			=> $node->findvalue('available/enddate'),
 	currency		=> $node->findvalue('price/@currency'),
@@ -94,15 +90,6 @@ my @breadcrumbs = (
 );
 
 print SUB::printBreadcrumbsSITE(\@breadcrumbs);
-
-
-
-
-
-
-
-
-
 
 
 # inizializzazione ed istanziazione del sitema di templating

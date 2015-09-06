@@ -5,11 +5,11 @@
 
         <img title="[% operator %] logo" alt="[% operator %] logo" src="../images/logo_[% operator %].png" longdesc="http://www.[% operator %].com/" />
 
-        <h1>[% operator %] - [% title %]</h1>
+        <h2>[% operator %] - [% title %]</h2>
         <dl>
             <dt>Title: </dt><dd>[% title %]</dd>
             <dt>Payments: </dt><dd>[% payments %]</dd>
-            <dt>Available: </dt><dd>[% available %] (from: [% startdate %] to: [% enddate %])</dd>
+            <dt>Available: </dt><dd>from: [% startdate %] to: [% enddate %]</dd>
             <dt>Price: </dt><dd>[% price %] [% currency %]</dd>
             <dt>Expiry: </dt><dd>[% expiry %] [% unit %]</dd>
             <dt>Call: </dt><dd>[% minutes %] minutes</dd>
@@ -17,7 +17,7 @@
             <dt>Internet: </dt><dd>[% internet %] [% datasize %]</dd>
         </dl>
             
-        <p>Note: [% description %]</p>
+        <p>Note: <em>[% description %]</em></p>
 
         <p>Offert created at: <em>[% insertdatetime %]</em></p>
         
