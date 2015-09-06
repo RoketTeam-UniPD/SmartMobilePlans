@@ -64,7 +64,7 @@ sub printStartHeader {
     <title>$title Smart Mobile Plans Site</title>
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="../../css/main.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="all" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
 </head>
 <body>
