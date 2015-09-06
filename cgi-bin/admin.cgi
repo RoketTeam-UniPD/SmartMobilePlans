@@ -12,6 +12,8 @@ use XML::LibXML;
 use LWP::UserAgent;
 use POSIX qw(strftime);
 
+
+
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file('../data/admins.xml');
 
@@ -29,12 +31,12 @@ if ($session->param('user') ne undef) {
 
 	my $admin = $doc->findnodes("//admin[username='" . $username . "']");
 
-	if (!$admin) {
+	if (!$admin || $username eq '') {
 		print $cgi->redirect('login.cgi?e=usr');
 	} else {
 		my $password = $admin->pop()->findvalue("./password");
 		
-		if ($password ne $pwd) {
+		if ($password ne $pwd || $pwd eq '') {
 			print $cgi->redirect('login.cgi?e=pwd');
 		}
 
