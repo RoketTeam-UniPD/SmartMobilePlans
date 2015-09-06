@@ -1,0 +1,5 @@
+controllare con i test dei bug i campi dei form
+
+controllare che non ci siano TODO nel sito
+
+controllare che se metto user e password vuote non vada in loop
