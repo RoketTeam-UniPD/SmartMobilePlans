@@ -45,10 +45,13 @@ if ($session->param('user') ne undef) {
 	} 
 }
 
+
 my %data = (
 	username => $username, 
 	error => $cgi->param("e"),
-	curYear => strftime "%Y", localtime
+	curYear => "2015",
+	formData => $session->param("form-data"),
+	strftime "%Y", localtime,
 );
 
 print $cgi->header( -type => "text/html", charset => 'utf-8', -status => "200 OK" );

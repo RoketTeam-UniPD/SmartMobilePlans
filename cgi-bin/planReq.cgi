@@ -6,6 +6,7 @@ use warnings;
 
 use CGI;
 use SUB;
+use CGI::Session;
 use HTML::Entities;
 use XML::LibXML;
 use POSIX qw(strftime);
@@ -22,7 +23,6 @@ my $operator = $cgi->param('operator');
 my $payments = $cgi->param('payments');
 my $title = $cgi->param('title');
 my $insertdatetime = strftime "%Y-%m-%d %H-%M-%s", localtime;
-my $available = $cgi->param('available');
 my $startdate = $cgi->param('syear') . "-" . $cgi->param('smonth') . "-" . $cgi->param('sday');
 my $enddate = $cgi->param('eyear') . "-" . $cgi->param('emonth') . "-" . $cgi->param('eday');
 my $price = $cgi->param('price');
@@ -36,12 +36,40 @@ my $internet = $cgi->param('internet');
 my $description = $cgi->param('description');
 
 if (!$title or !$price or !$expiry or !$minutes or !$messages or !$internet or !$description) {
+	saveformData();
 	print $cgi->redirect('admin.cgi?e=plan-empty');  
 }
 
 my $plan = $doc->findnodes("//" . $operator . "[title='" . $title . "']");
 if ($plan) {
+	saveformData();
 	print $cgi->redirect('admin.cgi?e=plan-exists'); 
+}
+
+sub saveformData {
+	my $session = CGI::Session->load();
+
+	my %formData = (
+		title 		=> $title, 
+		operator 	=> $operator,
+		payments 	=> $payments,
+		syear 		=> $cgi->param('syear'),
+		smonth 		=> $cgi->param('smonth'),
+		sday 		=> $cgi->param('sday'),
+		eyear 		=> $cgi->param('eyear'),
+		emonth 		=> $cgi->param('emonth'),
+		eday 		=> $cgi->param('eday'),
+		price 		=> $price,
+		currency 	=> $currency,
+		unit 		=> $unit,
+		expiry 		=> $expiry,
+		minutes     => $minutes,
+		messages    => $messages,
+		datasize    => $datasize,
+		internet    => $internet,
+		description => $description
+	);
+	$session->param("form-data", \%formData);
 }
 
 ## TEST
