@@ -59,7 +59,7 @@ print SUB::printBreadcrumbsSITE(\@breadcrumbs);
 my $template = Template->new();
 my $template_file = 'templates/login.tt';
 
-$template->process($template_file, { error => $cgi->param('e') }) || die "Template process failed: ", $template->error(), "\n";
+$template->process($template_file, { error => $cgi->param('err') }) || die "Template process failed: ", $template->error(), "\n";
 
 
 # stampa footer
