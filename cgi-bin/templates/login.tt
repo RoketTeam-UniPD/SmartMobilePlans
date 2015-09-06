@@ -1,84 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>Home - Smart Mobile Plans</title>
-	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-	<meta name="keywords" content=""/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
-</head>
+<div class="content">
 
-<body>
+    <div id="admin">
 
-	<!-- Start Header -->
-	<div class="header">
-		<h1>Smart Mobile Plans</h1>
-		<h2>Choosing a mobile phone plan has never been this simple!</h2>
-	</div> <!-- End Header -->
+        <h1>Admin area login:</h1>
 
+        [% IF error == 'usr' %]
+        <p id="textError" title="Entered wrong username">
+            <strong>ERROR: Username doesn't exists !</strong><br />
+            <em>Please insert an valid username.</em>
+        </p>
+        [% END %]
 
-	<!-- Start Menu -->
-	<div class="menu">
-		<ul>
-			<li><a href="home.cgi" title="Home">HOME</a></li>
-			<li><a href="operator.cgi?name=tim">TIM</a></li>
-			<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
-			<li><a href="operator.cgi?name=tre">TRE</a></li>
-			<li><a href="operator.cgi?name=wind">WIND</a></li>
-			<li><a href="about.html">ABOUT</a></li>
-		</ul>
-	</div> <!-- End Menu -->
+        [% IF error == 'pwd' %]
+        <p id="textError" title="Entered wrong password">
+            <strong>ERROR: Wrong password !</strong><br />
+            <em>Please insert an valid password.</em>
+        </p>
+        [% END %]
 
+        <form id="loginForm" method="post" action="admin.cgi" enctype="multipart/form-data">
+            <p>
+                <label title="Username" for="username">Username:</label>
+                <input title="Insert Username" tabindex="7" name="username" type="text" id="username" />
+            </p>
+            <p>
+                <label title="Password" for="password">Password:</label>
+                <input title="Insert Password" tabindex="8" name="pwd" type="password" id="password" />
+            </p>
+            <p>
+                <input title ="Submit credentials for login" type="submit" tabindex="9" name="Submit" value="Submit" />
+            </p>
+        </form>
 
-	<!-- Start Breadcrumbs -->
-	<div class="breadcrumbs">
-		<p>You are in: <a title="Login">LOGIN</a></p>
-	</div> <!-- End Breadcrumbs -->
+        <p title="Info for request new login data">INFO: <em> contact an administrator <a title="Admin email" href="mailto:roketteam.unipd@gmail.com">roketteam.unipd@gmail.com</a> for request new personal login access. Thanks!</em></p>
 
+    </div>
 
-	<!-- Start Container -->
-	<div class="content">
-
-		<div id="admin">
-			<h1>Admin area login: </h1>
-
-
-			<form id="loginForm" method="post" action="admin.cgi" enctype="multipart/form-data">
-				<p>
-					<label for="username">Username:</label>
-					<input tabindex="TODO" name="username" type="text" id="username" />
-				</p>
-				<p>
-					<label for="password">Password:</label>
-					<input tabindex="TODO" name="pwd" type="password" id="password" />
-				</p>
-				<p>
-					<input type="submit" tabindex="TODO" name="Submit" value="Submit" />
-				</p>
-			</form>
-
-			[% IF error == 'usr' %]
-			<p id="textError">Entered username does not exists !</p>
-			[% END %]
-
-			[% IF error == 'pwd' %]
-			<p id="textError">Entered password is incorrect !</p>
-			[% END %]
-
-
-			<p><em>* per ottenere nuove login contattare l'amministrazione all'indirizzo <a title="Admin email" href="mailto:roketteam.unipd@gmail.com">roketteam.unipd@gmail.com</a></em></p>
-		</div>
-
-
-	</div> <!-- End Container -->
-
-
-	<div class="footer">
-		<p><a href="login.cgi" >Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
-	</div> <!-- End Footer -->
-
-</body>
-
-</html>
+</div>
