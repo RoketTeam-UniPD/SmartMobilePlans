@@ -38,7 +38,6 @@ my $description = $cgi->param('description');
 if (!$title or !$price or !$expiry or !$minutes or !$messages or !$internet or !$description) {
 	saveformData();
 	print $cgi->redirect('admin.cgi?e=plan-empty');  
-
 	exit;
 }
 
@@ -46,6 +45,7 @@ my $plan = $doc->findnodes("//" . $operator . "[title='" . $title . "']");
 if ($plan) {
 	saveformData();
 	print $cgi->redirect('admin.cgi?e=plan-exists'); 
+	exit;
 }
 
 sub saveformData {
