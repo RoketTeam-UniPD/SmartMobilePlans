@@ -326,7 +326,7 @@ dl.operator {
     display: block;
 }
 
-#textError p {
+#admin p#textError {
 	color: red;
 	text-align: center;
 	margin: 5em 0;
@@ -345,11 +345,13 @@ dl.operator {
 
 #adminError {
 	color: red;
+	font-weight: bold;
 	text-align: left;
 }
 
 #adminSuccess {
 	color: green;
+	font-weight: bold;
 	text-align: left;
 }
 

@@ -86,7 +86,8 @@ print SUB::printMenuSITE($plan->{'operator'});
 # stampa breadcrumbs HTML
 my @breadcrumbs = (
     [ "Home", "home.cgi" ],
-    [ "$plan->{'title'} ($plan->{'operator'} plan)" ]
+    [ "$plan->{'operator'}", "operator.cgi?name=$plan->{'operator'}" ],
+    [ "$plan->{'title'} " ],
 );
 
 print SUB::printBreadcrumbsSITE(\@breadcrumbs);
