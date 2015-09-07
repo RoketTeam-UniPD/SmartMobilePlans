@@ -188,6 +188,15 @@
             [% END %]
         </form>
 
+        <form id="adminForm" method="post" action="logout.cgi" enctype="multipart/form-data">
+
+            <h3>Exit:</h3>
+            <p>
+                <input type="submit" name="Logout" value="Logout"/>
+            </p>
+
+        </form>
+
     </div>
 
 </div>
