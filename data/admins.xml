@@ -8,8 +8,4 @@
     <username>user</username>
     <password>root</password>
   </admin>
-  <admin idref="id-3">
-    <username/>
-    <password/>
-  </admin>
 </admins>

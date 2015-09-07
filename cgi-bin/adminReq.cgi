@@ -23,7 +23,7 @@ my $username = $cgi->param('username');
 my $pwd = sha256_hex($cgi->param('pwd'));
 my $pwdc = sha256_hex($cgi->param('pwd-confirm'));
 
-if (!$pwd or $pwdc or !$username) {
+if (!$pwd or !$pwdc or !$username) {
 	print $cgi->redirect('admin.cgi?e=admin-empty'); 
 }
 
