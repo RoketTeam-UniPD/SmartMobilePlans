@@ -7,3 +7,11 @@ controllare che se metto user e password vuote non vada in loop
 controllare tutti gli schemi xml e xsd
 
 convertire in altri formati (bambole russe, fette di salame gli schemi)
+
+conversione date su file xml
+
+conversione date su sito web prima apgina e pagina plans
+
+convertire date da acquisizione
+
+convertire date e stare attenti alla differenza di inizio/fine
