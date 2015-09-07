@@ -71,10 +71,9 @@ if ($session->param('user') ne undef) {
 
 my %data = (
     username => $username, 
+    curYear => (strftime "%Y", localtime),
     error => $cgi->param("e"),
-    curYear => "2015",
-    formData => $session->param("form-data"),
-    #curYear => strftime "%Y", localtime,
+    formData => $session->param("form-data"),    
 );
 
 
