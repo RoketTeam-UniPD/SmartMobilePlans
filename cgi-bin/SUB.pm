@@ -38,6 +38,9 @@ sub validateSchema {
 
 sub generateID {
     my $nodes = $_[0]->findnodes('(//*[@xml:id])[last()]');
+    if (!$nodes) {
+        return "id-01";
+    }
     my $idref = $nodes->pop()->getAttribute("xml:id");
     $idref =~ s/(\d+)$/$1 + 1/e;
     
