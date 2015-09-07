@@ -1,0 +1,486 @@
+/* General page style */
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: #C7C7C7;
+	background-color: rgba(199, 199, 199, 1);
+	background-image: url("../images/bg.png");
+}
+
+body {
+	background-color: #FFF;
+	font-family: 'Open Sans', sans-serif;
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	font-size: 1em;
+}
+
+
+/* General font style */
+h1 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #2A2829;
+}
+
+h2 {
+	font-size: 1.25em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #2A2829;
+}
+
+h3 {
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #2A2829;
+}
+
+p {
+	font-size: .95em;
+	font-weight: normal;
+	color: #000;
+}
+
+
+/* Header */
+.header {
+	padding-top: 1.25em;
+	padding-bottom: 1.25em;
+	text-align: center;
+	background-color: #FFF;
+}
+
+.header h1 {
+	color: #2A2829;
+	font-size: 1.9em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.header p {
+	color: #2A2829;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+
+@media screen and (max-width:640px) {
+	.header h1 {
+		font-size: 1.5em;
+	}
+
+	.header p {
+		font-size: .8em;
+	}
+}
+
+
+
+
+
+
+
+/* Main Menu */
+.menu ul {
+	background-color: #bbc7c8;
+	color: #000;
+	float: left;
+	font-size: 1.1em;
+	font-weight: normal;
+	width: 100%;
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu li a {
+	background-color: #bbc7c8;
+	color: #000;
+	padding: .25em .4em;
+	float: left;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	background-color: #2A2829;
+	color: #fff;
+}
+
+.menu li a.active {
+	background-color: #2A2829;
+	color: #fff;
+}
+
+@media only screen and (max-width:480px) {
+	.menu li {
+		display: block;
+	}
+
+	.menu li a {
+		border-bottom: .1em solid #2A2829;
+		display: block;
+		float: none;
+		margin: 0;
+		padding: .25em 0;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+
+/* Breadcrumbs */
+.breadcrumbs {
+	clear: both;
+	padding: 0.25em 0.5em;
+	color: #000;
+	background-color: #bbc7c8;
+	border: none;
+	border-bottom: .1em solid #2A2829;
+	border-top: .1em solid #2A2829;
+}
+
+.breadcrumbs p {
+	color: #000;
+	font-weight: normal;
+	font-size: .9em;
+}
+
+
+
+
+
+
+
+
+/* Content */
+.content {
+	background-color: #FFF;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+
+}
+
+
+@media only screen and (max-width:1024px) {
+	.content {
+		float: none;
+		width: 100%;
+	}
+
+}
+
+
+
+.welcome {
+	margin: 2em;
+}
+
+.date {
+	font-size: .95em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #2A2829;
+}
+
+
+.topPage {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.topPage a:link,
+.topPage a:visited {
+	color: #0000EE;
+}
+
+
+
+
+/* Footer */
+.footer {
+	background-color: #bbc7c8;
+	clear: both;
+	padding: .5em;
+	text-align: center;
+}
+
+.footer p {
+	color: #000;
+	font-size: .9em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************
+				   HOME
+*********************************************/
+.news {
+	margin: 3em 2em 2em 2em;
+}
+
+.news h3 {
+	color: #000;
+	padding-top: .25em;
+}
+
+.news li {
+	list-style-type: none;
+	padding-bottom: 1.25em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************
+				   OPERATOR
+*********************************************/
+
+dl.operator {
+	width: 65%;
+	margin: 1em auto 9em auto;
+}
+
+@media only screen and (max-width:640px) {
+	dl.operator {
+		width: 95%;
+		margin: auto;
+		text-align: center;
+	}
+}
+
+.operator dt {
+	background-color: #bbc7c8;
+	border: .1em dashed #2A2829;
+	color: #FFF;
+	padding: .1em .25em .1em 1em;
+
+}
+
+.operator dd {
+	background-color: none;
+	border: .1em dashed #2A2829;
+	border-top: none;
+	color: #000;
+	margin:0 0 1em 0;
+	padding: .95em 2em;
+}
+
+
+.operator dd li {
+	list-style-position: inside;
+	list-style-type: square;
+	margin-left: 1em;
+	text-align: left;
+}
+
+
+.operator dd img {
+	float: right;
+	margin: 1em;
+	max-height: 50px;
+	padding: 0;
+}
+
+@media only screen and (max-width:640px) {
+	.operator dd img {
+		float: none;
+		margin: 1em;
+		max-height: 50px;
+		padding: 0;
+	}
+
+	.operator dd li {
+		margin: 0 auto;
+		padding: 0 auto;
+		text-align: center;
+		list-style: none;
+	}
+
+}
+
+.operator dd h2 {
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************
+				   PLAN
+*********************************************/
+
+.plan {
+	width: 60%;
+	margin: 2em auto;
+}
+
+.plan img {
+	display: block;
+	margin: 0 auto;
+}
+
+.plan h2 {
+	margin-top: 2em;
+	text-align: center;
+}
+
+
+.plan dl {
+	margin: 2em auto;
+}
+ 
+.plan dt {
+	float:left; 
+	font-weight:bold; 
+	margin-right: 2em; 
+	padding: .25em 0;	
+	width: 5em; 
+}
+ 
+.plan dd {
+	margin: .25em 0; 
+	padding: .25em 0;
+}
+
+.plan p {
+	font-size: .85em;
+	margin: 3.75em auto;
+}
+
+@media only screen and (max-width:640px) {
+	.plan {
+		width: 95%;
+		margin: 2em auto;
+	}
+
+	.plan img {
+		display: block;
+		margin: 0 auto;
+		width: 30%;
+	}
+
+	.plan h2 {
+		margin-top: .5em;
+		text-align: center;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************
+				   LOGIN
+*********************************************/
+
+
+
+#loginForm {
+	text-align: center;
+	margin: 5em 0;
+}
+
+#loginForm input, select, textarea { 
+    border: .1em #2A2829 solid;
+    margin: 1em 0;
+}
+
+#loginForm label { 
+    display: block;
+}
+
+
+
+
+/********************************************
+				   ADMIN
+*********************************************/
+
+
+
+#admin {
+	margin: 2em;
+}
+
+#admin p#textError {
+	color: red;
+	text-align: center;
+	margin: 5em 0;
+}
+
+
+#adminForm {
+	text-align: left;
+	margin: 1em 0;
+}
+
+#adminForm label {
+	display: inline-block;
+    width: 10%;
+}
+
+#adminForm input, select, textarea { 
+    border: .1em #2A2829 solid;
+    margin: .5em 0;
+}
+
+
+
