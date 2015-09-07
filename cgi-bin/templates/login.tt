@@ -3,7 +3,7 @@
 
     <div id="admin">
 
-        <h1>Admin area login:</h1>
+        <h2>Admin area login:</h2>
 
         [% IF error == 'usr' %]
         <p id="textError" title="Entered wrong username">
