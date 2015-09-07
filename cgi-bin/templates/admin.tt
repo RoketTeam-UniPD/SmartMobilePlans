@@ -1,232 +1,186 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<title>Admin - Smart Mobile Plans</title>
-	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
-	<meta name="keywords" content=""/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<link rel="stylesheet" type="text/css" href="../../css/main.css" media="all"/>
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
-</head>
-
-<body>
-
-	<!-- Start Header -->
-	<div class="header">
-		<h1>Smart Mobile Plans</h1>
-		<h2>Choosing a mobile phone plan has never been this simple!</h2>
-	</div> <!-- End Header -->
 
 
-	<!-- Start Menu -->
-	<div class="menu">
-		<ul>
-			<li><a href="home.cgi" title="Home">HOME</a></li>
-			<li><a href="operator.cgi?name=tim">TIM</a></li>
-			<li><a href="operator.cgi?name=vodafone">VODAFONE</a></li>
-			<li><a href="operator.cgi?name=tre">TRE</a></li>
-			<li><a href="operator.cgi?name=wind">WIND</a></li>
-			<li><a href="about.html">ABOUT</a></li>
-		</ul>
-	</div> <!-- End Menu -->
+    <div class="content">
+        <div id="admin">
+
+            <h1>Hi, [% username %]! Welcome the the Admin Area!</h1>
 
 
-	<!-- Start Breadcrumbs -->
-	<div class="breadcrumbs">
-		<p>You are in: <a title="Admin Area" xml:lang="en">ADMIN AREA</a></p>
-	</div> <!-- End Breadcrumbs -->
+            <form id="adminForm" method="post" action="planReq.cgi" enctype="multipart/form-data">
+            <h2>Add a new plan: </h2>
+            <p>Il seguente form permette l'inserimento di una nuova tariffa. Completa tutti i campi per un corretto inserimento.</p>
+
+            <p>
+                <label for="operator">Operator:</label>
+                <!-- <input tabindex="TODO" name="username" type="text" id="username" /> -->
+                <select name="operator" id="operator">
+                    <option [% IF formData.operator == 'wind' %] selected="selected" [% END %] value="wind">Wind</option>
+                    <option [% IF formData.operator == 'vodafone' %] selected="selected" [% END %] value="vodafone">Vodafone</option>
+                    <option [% IF formData.operator == 'tre' %] selected="selected" [% END %] value="tre">Tre</option>
+                    <option [% IF formData.operator == 'tim' %] selected="selected" [% END %] value="tim">Tim</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="payments">Payments:</label>
+                <select name="payments" id="payments">
+                    <option [% IF formData.payments == 'rechargeable' %] selected="selected" [% END %] value="rechargeable">Rechargeable</option>
+                    <option [% IF formData.payments == 'subscription' %] selected="selected" [% END %] value="subscription">Subscription</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="title">Title:</label>
+                <input tabindex="TODO" value="[% formData.title %]" name="title" type="text" id="title" />
+            </p>
+
+            <p>
+                <label for="sday">Start date:</label>
+                Day
+                <select name="sday" id="sday">
+                [% i = 1; WHILE i <= 31 %]
+                    <option [% IF formData.sday == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
+                [% i = i + 1 %]
+                [% END %]   
+                </select>
+
+                Month
+                <select name="smonth">
+                [% i = 1; WHILE i <= 12 %]
+                    <option [% IF formData.smonth == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
+                [% i = i + 1 %]
+                [% END %]
+                </select>
+
+                Year
+                <select name="syear">
+                [% i = curYear; WHILE i <= curYear + 5 %]
+                    <option [% IF formData.syear == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
+                [% i = i + 1 %]
+                [% END %]
+                </select>
+            </p>
+
+            <p>
+                <label for="eday">End date:</label>
+                    
+                Day
+                <select name="eday">
+                    [% i = 1; WHILE i <= 31 %]
+                        <option [% IF formData.eday == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
+                    [% i = i + 1 %]
+                    [% END %]
+                </select>
+
+                Month
+                <select name="emonth">
+                [% i = 1; WHILE i <= 12 %]
+                    <option [% IF formData.emonth == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
+                [% i = i + 1 %]
+                [% END %]
+                </select>
+
+                Year
+                <select name="eyear">
+                [% i = curYear; WHILE i <= curYear + 5 %]
+                    <option [% IF formData.eyear == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
+                [% i = i + 1 %]
+                [% END %]
+                </select>
+            </p>
+
+            <p>
+                <label for="price">Price:</label>
+                <input type="text" name="price" value="[% formData.price %]" id="price"/>
+                    Currency:
+                <select name="currency" id="currency">
+                    <option [% IF formData.currency == 'euro' %] selected="selected" [% END %] value="euro">Euro</option>
+                    <option [% IF formData.currency == 'pounds' %] selected="selected" [% END %] value="pounds">Pounds</option>
+                    <option [% IF formData.currency == 'US dollars' %] selected="selected" [% END %] value="US dollars">US Dollars</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="currency">Expiry:</label>
+                <input type="text" name="expiry" value="[% formData.expiry %]" id="expiry"/>
+                    Unit:
+                <select name="unit" id="unit">
+                    <option [% IF formData.unit == 'day' %] selected="selected" [% END %] value="day">Day</option>
+                    <option [% IF formData.unit == 'week' %] selected="selected" [% END %] value="week">Week</option>
+                    <option [% IF formData.unit == 'month' %] selected="selected" [% END %] value="month">Month</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="minutes">Minutes:</label>
+                <input type="text" name="minutes" value="[% formData.minutes %]" id="minutes"/>
+            </p>
+
+            <p>
+                <label for="minutes">Messages:</label>
+                <input type="text" name="messages" value="[% formData.messages %]" id="messages"/>
+            </p>
+
+            <p>
+                <label for="internet">Internet: </label>
+                <input type="text" name="internet" value="[% formData.internet %]"/>
+                    Data size:
+                <select name="datasize" id="datasize">
+                    <option [% IF formData.datasize == 'MB' %] selected="selected" [% END %] value="MB">MB</option>
+                    <option [% IF formData.datasize == 'GB' %] selected="selected" [% END %] value="GB">GB</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="description">Description:</label>
+                <textarea name="description" id="description">[% formData.description %]</textarea>
+            </p>
+
+            <p>
+                <input type="submit" tabindex="TODO" name="Submit" value="Submit Plan" />
+            </p>
+        </form>
+        [% IF error == 'plan-empty' %]
+        <p id="textError">One or more fields are empty!</p>
+        [% END %]
+        [% IF error == 'plan-exists' %]
+        <p id="textError">Entered title already exists for current operator!</p>
+        [% END %]
 
 
-	<!-- Start Container -->
-	<div class="content">
-		<div id="admin">
+        <form id="adminForm" method="post" action="adminReq.cgi" enctype="multipart/form-data">
 
-			<h1>Hi, [% username %]! Welcome the the Admin Area!</h1>
+            <h2>Add a new admin:</h2>
+            <p>Il seguente form permette l'inserimento di un nuovo utente admin. Completa tutti i campi per un corretto inserimento.</p>
 
+            [% IF error == 'admin-usr' %]
+            <p id="textError">Entered username already exists!</p>
+            [% END %]
+            [% IF error == 'admin-pwd' %]
+            <p id="textError">Entered passwords does not match!</p>
+            [% END %]
+            [% IF error == 'admin-empty' %]
+            <p id="textError">One or more fields are empty!</p>
+            [% END %]
 
-			<form id="adminForm" method="post" action="planReq.cgi" enctype="multipart/form-data">
-			<h2>Add a new plan: </h2>
-			<p>Il seguente form permette l'inserimento di una nuova tariffa. Completa tutti i campi per un corretto inserimento.</p>
-				<p>
-					<label for="operator">Operator:</label>
-					<!-- <input tabindex="TODO" name="username" type="text" id="username" /> -->
-					<select name="operator" id="operator">
-						<option [% IF formData.operator == 'wind' %] selected="selected" [% END %] value="wind">Wind</option>
-						<option [% IF formData.operator == 'vodafone' %] selected="selected" [% END %] value="vodafone">Vodafone</option>
-						<option [% IF formData.operator == 'tre' %] selected="selected" [% END %] value="tre">Tre</option>
-						<option [% IF formData.operator == 'tim' %] selected="selected" [% END %] value="tim">Tim</option>
-					</select>
-				</p>
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username"/>
+            </p>
+            <p>
+                <label for="pwd">Password:</label>
+                <input type="password" name="pwd" id="pwd"/>
+            </p>
+            <p>
+                <label for="pwd-confirm">Confirm password:</label>
+                <input type="password" name="pwd-confirm" id="pwd-confirm"/>
+            </p>
+            <p>
+                <input type="submit" name="Submit" value="Submit Admin"/>
+            </p>
 
+        </form>
 
-				<p>
-					<label for="payments">Payments:</label>
-					<select name="payments" id="payments">
-						<option [% IF formData.payments == 'rechargeable' %] selected="selected" [% END %] value="rechargeable">Rechargeable</option>
-						<option [% IF formData.payments == 'subscription' %] selected="selected" [% END %] value="subscription">Subscription</option>
-					</select>
-				</p>
+    </div>
 
-				<p>
-					<label for="title">Title:</label>
-					<input tabindex="TODO" value="[% formData.title %]" name="title" type="text" id="title" />
-				</p>
-
-				<p>
-					<label for="sday">Start date:</label>
-					Day
-					<select name="sday" id="sday">
-					[% i = 1; WHILE i <= 31 %]
-						<option [% IF formData.sday == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
-					[% i = i + 1 %]
-					[% END %]
-						
-					</select>
-
-					Month
-					<select name="smonth">
-					[% i = 1; WHILE i <= 12 %]
-						<option [% IF formData.smonth == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
-					[% i = i + 1 %]
-					[% END %]
-					</select>
-
-					Year
-					<select name="syear">
-					[% i = curYear; WHILE i <= curYear + 5 %]
-						<option [% IF formData.syear == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
-					[% i = i + 1 %]
-					[% END %]
-					</select>
-				</p>
-
-				<p>
-					<label for="eday">End date:</label>
-					
-					Day
-					<select name="eday">
-						[% i = 1; WHILE i <= 31 %]
-							<option [% IF formData.eday == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
-						[% i = i + 1 %]
-						[% END %]
-					</select>
-
-					Month
-					<select name="emonth">
-					[% i = 1; WHILE i <= 12 %]
-						<option [% IF formData.emonth == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
-					[% i = i + 1 %]
-					[% END %]
-					</select>
-
-					Year
-					<select name="eyear">
-					[% i = curYear; WHILE i <= curYear + 5 %]
-						<option [% IF formData.eyear == i %] selected="selected" [% END %] value="[% i %]">[% i %]</option>
-					[% i = i + 1 %]
-					[% END %]
-					</select>
-				</p>
-
-				<p>
-					<label for="price">Price:</label>
-					<input type="text" name="price" value="[% formData.price %]" id="price"/>
-					Currency:
-					<select name="currency" id="currency">
-						<option [% IF formData.currency == 'euro' %] selected="selected" [% END %] value="euro">Euro</option>
-						<option [% IF formData.currency == 'pounds' %] selected="selected" [% END %] value="pounds">Pounds</option>
-						<option [% IF formData.currency == 'US dollars' %] selected="selected" [% END %] value="US dollars">US Dollars</option>
-					</select>
-				</p>
-
-				<p>
-					<label for="currency">Expiry:</label>
-					<input type="text" name="expiry" value="[% formData.expiry %]" id="expiry"/>
-					Unit:
-					<select name="unit" id="unit">
-						<option [% IF formData.unit == 'day' %] selected="selected" [% END %] value="day">Day</option>
-						<option [% IF formData.unit == 'week' %] selected="selected" [% END %] value="week">Week</option>
-						<option [% IF formData.unit == 'month' %] selected="selected" [% END %] value="month">Month</option>
-					</select>
-				</p>
-
-				<p>
-					<label for="minutes">Minutes:</label>
-					<input type="text" name="minutes" value="[% formData.minutes %]" id="minutes"/>
-				</p>
-
-				<p>
-					<label for="minutes">Messages:</label>
-					<input type="text" name="messages" value="[% formData.messages %]" id="messages"/>
-				</p>
-
-				<p>
-					<label for="internet">Internet: </label>
-					<input type="text" name="internet" value="[% formData.internet %]"/>
-					Data size:
-					<select name="datasize" id="datasize">
-						<option [% IF formData.datasize == 'MB' %] selected="selected" [% END %] value="MB">MB</option>
-						<option [% IF formData.datasize == 'GB' %] selected="selected" [% END %] value="GB">GB</option>
-					</select>
-				</p>
-
-				<p>
-					<label for="description">Description:</label>
-					<textarea name="description" id="description">[% formData.description %]</textarea>
-				</p>
-
-				<p>
-					<input type="submit" tabindex="TODO" name="Submit" value="Submit Plan" />
-				</p>
-			</form>
-			[% IF error == 'plan-empty' %]
-			<p id="textError">One or more fields are empty!</p>
-			[% END %]
-			[% IF error == 'plan-exists' %]
-			<p id="textError">Entered title already exists for current operator!</p>
-			[% END %]
-
-
-			<form id="adminForm" method="post" action="adminReq.cgi" enctype="multipart/form-data">
-				<h2>Add a new admin:</h2>
-				<p>Il seguente form permette l'inserimento di un nuovo utente admin. Completa tutti i campi per un corretto inserimento.</p>
-				<p>
-					<label for="username">Username:</label>
-					<input type="text" name="username" id="username"/>
-				</p>
-				<p>
-					<label for="pwd">Password:</label>
-					<input type="password" name="pwd" id="pwd"/>
-				</p>
-				<p>
-					<label for="pwd-confirm">Confirm password:</label>
-					<input type="password" name="pwd-confirm" id="pwd-confirm"/>
-				</p>
-				<p>
-					<input type="submit" name="Submit" value="Submit Admin"/>
-				</p>
-			</form>
-			[% IF error == 'admin-usr' %]
-			<p id="textError">Entered username already exists!</p>
-			[% END %]
-			[% IF error == 'admin-pwd' %]
-			<p id="textError">Entered passwords does not match!</p>
-			[% END %]
-			[% IF error == 'admin-empty' %]
-			<p id="textError">One or more fields are empty!</p>
-			[% END %]
-
-		</div>
-	</div> <!-- End Container -->
-
-
-
-	<!-- Start Footer -->
-	<div class="footer">
-		<p><a href="logout.cgi">Logout</a> | Copyright &copy; 2015 RocketTeam</p>
-	</div> <!-- End Footer -->
-
-</body>
-
-</html>
+</div>

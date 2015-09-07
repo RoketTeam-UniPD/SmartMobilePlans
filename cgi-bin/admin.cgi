@@ -1,24 +1,33 @@
 #!/usr/bin/perl -w
 
+
+#direttive d'uso strette
 use strict;
 use utf8;
 use warnings;
 
+
+#importazioni librerie varie
 use CGI;
-use Template;
-use CGI::Session;
-use XML::LibXML;
-use LWP::UserAgent;
-use POSIX qw(strftime);
 use Digest::SHA qw(sha256_hex);
+use CGI::Session;
+use POSIX qw(strftime);
+use Template;
+use XML::LibXML;
+#forse inutile use LWP::UserAgent;
 
 
+# importazione funzioni comuni
+use SUB;
 
+# lettura del file contenente gli amministratori
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file('../data/admins.xml');
 
+
 # istanza del file
 my $cgi = CGI->new();
+
 
 # caricamento sessione attive se presenti
 my $session = CGI::Session->load();
@@ -68,9 +77,43 @@ my %data = (
     strftime "%Y", localtime,
 );
 
-print $cgi->header( -type => "text/html", charset => 'utf-8', -status => "200 OK" );
 
+
+
+
+# creazione header del file
+print $cgi->header( -type => "text/html", charset => 'UTF-8', -status => "200 OK" );
+
+
+# stampa header
+print SUB::printStartHeader('Admin page of');
+
+
+# stampa header HTML
+print SUB::printHeaderSITE();
+
+
+# stampa menu HTML
+print SUB::printMenuSITE();
+
+
+# stampa breadcrumbs HTML
+my @breadcrumbs = (
+    [ "Admin" ],
+);
+
+print SUB::printBreadcrumbsSITE(\@breadcrumbs);
+
+
+# inizializzazione ed istanziazione del sitema di templating
 my $template = Template->new();
 my $template_file = 'templates/admin.tt';
 
 $template->process($template_file, \%data) || die "Template process failed: ", $template->error(), "\n";
+
+# stampa footer
+print SUB::printFooterHTML();
+
+
+# stampa chiusura header
+print SUB::printCloseHeader();
