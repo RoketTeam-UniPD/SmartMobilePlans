@@ -359,7 +359,7 @@ dl.operator {
 
 #adminForm label {
 	display: inline-block;
-    width: 10%;
+    width: 20%;
 }
 
 #adminForm input, select, textarea { 
