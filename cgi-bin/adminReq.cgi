@@ -20,8 +20,8 @@ my $doc = $parser->parse_file('../data/admins.xml');
 my $cgi = CGI->new();
 
 my $username = $cgi->param('username');
-my $pwd = sha256_hex($cgi->param('pwd'));
-my $pwdc = sha256_hex($cgi->param('pwd-confirm'));
+my $pwd = $cgi->param('pwd');
+my $pwdc = $cgi->param('pwd-confirm');
 
 if (!$pwd or !$pwdc or !$username) {
 	print $cgi->redirect('admin.cgi?e=admin-empty'); 
@@ -39,13 +39,13 @@ if ($pwd ne $pwdc) {
 my $admin_n  = $doc->getDocumentElement;
 
 my $node = XML::LibXML::Element->new('admin');
-$node->setAttribute('idref', SUB::generateID($doc));
+$node->setAttribute('xml:id', SUB::generateID($doc));
 
 my $u = XML::LibXML::Element->new('username');
 $u->appendText($username);
 
 my $p = XML::LibXML::Element->new('password');
-$p->appendText($pwd);
+$p->appendText(sha256_hex($pwd));
 
 $node->addChild($u);
 $node->addChild($p);

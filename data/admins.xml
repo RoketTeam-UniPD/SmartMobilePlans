@@ -5,7 +5,15 @@
     <password>a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8</password>
   </admin>
   <admin xml:id="id-2">
-    <username>user</username>
-    <password>root</password>
+    <username>user10</username>
+    <password>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</password>
+  </admin>
+  <admin xml:id="id-3">
+    <username>user1</username>
+    <password>489cd5dbc708c7e541de4d7cd91ce6d0f1613573b7fc5b40d3942ccb9555cf35</password>
+  </admin>
+  <admin xml:id="id-4">
+    <username>user2</username>
+    <password>489cd5dbc708c7e541de4d7cd91ce6d0f1613573b7fc5b40d3942ccb9555cf35</password>
   </admin>
 </admins>
