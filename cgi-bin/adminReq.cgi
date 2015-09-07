@@ -9,6 +9,7 @@ use SUB;
 use HTML::Entities;
 use XML::LibXML;
 use POSIX qw(strftime);
+use Digest::SHA qw(sha256_hex);
 
 
 my $parser = XML::LibXML->new();
@@ -19,8 +20,8 @@ my $doc = $parser->parse_file('../data/admins.xml');
 my $cgi = CGI->new();
 
 my $username = $cgi->param('username');
-my $pwd = $cgi->param('pwd');
-my $pwdc = $cgi->param('pwd-confirm');
+my $pwd = sha256_hex($cgi->param('pwd'));
+my $pwdc = sha256_hex($cgi->param('pwd-confirm'));
 
 if (!$pwd or $pwdc or !$username) {
 	print $cgi->redirect('admin.cgi?e=admin-empty'); 
