@@ -15,3 +15,5 @@ conversione date su sito web prima apgina e pagina plans
 convertire date da acquisizione
 
 convertire date e stare attenti alla differenza di inizio/fine
+
+inserire pulsante logout
