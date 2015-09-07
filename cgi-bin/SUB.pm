@@ -79,7 +79,7 @@ sub printStartHeader {
 
 sub printHeaderSITE {
     my $hr = qq{
-<div class="header" title="Welcome in to Smart Mobile Plans site. We help you for choosing a better mobile phone plan.">
+<div class="header" title="Welcome to Smart Mobile Plans, a site that collects the best offers from the leading mobile operators. We help you choose a better plan for your smartphone and make the right choise.">
     <h1 title="Title">Smart Mobile Plans</h1>
     <p title="Description of">Choosing a mobile phone plan has never been this simple!</p>
 </div>
@@ -186,7 +186,7 @@ sub printFooterHTML {
 
     my $hr = qq{
 <div class="footer">
-    <p>Access to <a title="login area" tabindex="6" href="login.cgi">login</a> for edit site. | Copyright &copy; 2015 RocketTeam</p>
+    <p><a title="login area" tabindex="6" href="login.cgi">Admin Area</a> | Copyright &copy; 2015 RocketTeam</p>
 </div>
 };
 

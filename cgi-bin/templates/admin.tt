@@ -8,7 +8,7 @@
 
             <form id="adminForm" method="post" action="planReq.cgi" enctype="multipart/form-data">
             <h3>Add a new plan: </h3>
-            <p>Il seguente form permette l'inserimento di una nuova tariffa. Completa tutti i campi per un corretto inserimento.</p>
+            <p>With following form you can add a new plan to our site. Make sure to complete every field in order to successfully save the plan.</p>
 
             <p>
                 <label for="operator">Operator:</label>
@@ -156,7 +156,7 @@
         <form id="adminForm" method="post" action="adminReq.cgi" enctype="multipart/form-data">
 
             <h3>Add a new admin:</h3>
-            <p>Il seguente form permette l'inserimento di un nuovo utente admin. Completa tutti i campi per un corretto inserimento.</p>
+            <p>With following form you can add a new admin to our site. Make sure to complete every field in order to successfully save the admin.</p>
 
             <p>
                 <label for="username">Username:</label>

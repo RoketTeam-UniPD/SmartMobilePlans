@@ -48,4 +48,16 @@
     </rates>
     <description>Con TIM Special Voce chiami tutti e i tuoi minuti non scadono! Quelli che non consumi, li usi nei rinnovi successivi, quando vuoi.</description>
   </tim>
+  <wind payments="rechargeable" xml:id="id-4">
+    <title>test</title>
+    <insertdatetime>2015-09-07 19-30-1441647027</insertdatetime>
+    <price currency="euro">test</price>
+    <expiry unit="day">test2</expiry>
+    <rates>
+      <minutes>test2</minutes>
+      <messages>test</messages>
+      <internet datasize="MB">test2</internet>
+    </rates>
+    <description>test</description>
+  </wind>
 </plans>

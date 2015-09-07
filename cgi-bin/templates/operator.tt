@@ -3,7 +3,7 @@
 
     <div class="welcome">
         <h2>[% operator_name %]'s plans</h2>
-        <p>In this page can you view better plans of [% operator_name FILTER upper %]</p>
+        <p>Here's a list of all [% operator_name FILTER upper %]'s plan. You can open every plan in order to consult the offer's detail.</p>
     </div>
 
     <dl title="Small details of plan" class="operator">
@@ -17,13 +17,13 @@
                 <li>Messages: <strong>[% p.messages %] sms</strong></li>
                 <li>Internet: <strong>[% p.internet %] [% p.datasize %]</strong></li>
             </ul> 
-            <p>Read more <a title="Detail plan" href="plan.cgi?id=[% p.id %]">detail of plan</a>.</p>
+            <p>Read more <a title="Detail plan" href="plan.cgi?id=[% p.id %]">detail of the plan</a>.</p>
         </dd>
         [% END %]
     </dl>
 
     <p class="topPage">
-        <a title="Go to top of page" tabindex="7" href="#header">Back to top of page</a>
+        <a title="Go to top of page" tabindex="7" href="#header">Back to the top of page</a>
     </p>
 
 </div>
