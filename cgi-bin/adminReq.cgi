@@ -31,10 +31,12 @@ if ($pwd eq '' || $pwdc eq '' || $username eq '') {
 my $admin = $doc->findnodes("//admin[username='" . $username . "']");
 if ($admin) {
 	print $cgi->redirect('admin.cgi?e=admin-usr'); 
+	exit; 
 }
 
 if ($pwd ne $pwdc) {
 	print $cgi->redirect('admin.cgi?e=admin-pwd'); 
+	exit; 
 }
 
 my $admin_n  = $doc->getDocumentElement;

@@ -12,8 +12,4 @@
     <username>user1</username>
     <password>489cd5dbc708c7e541de4d7cd91ce6d0f1613573b7fc5b40d3942ccb9555cf35</password>
   </admin>
-  <admin xml:id="id-4">
-    <username>user2</username>
-    <password>489cd5dbc708c7e541de4d7cd91ce6d0f1613573b7fc5b40d3942ccb9555cf35</password>
-  </admin>
 </admins>

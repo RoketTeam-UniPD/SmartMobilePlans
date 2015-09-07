@@ -74,7 +74,7 @@ my %data = (
     error => $cgi->param("e"),
     curYear => "2015",
     formData => $session->param("form-data"),
-    strftime "%Y", localtime,
+    #curYear => strftime "%Y", localtime,
 );
 
 
