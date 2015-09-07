@@ -20,6 +20,16 @@
         <p>Note: <em>[% description %]</em></p>
 
         <p>Offert created at: <em>[% insertdatetime %]</em></p>
+
+        <form id="adminForm" method="post" action="deleteReq.cgi" enctype="multipart/form-data">
+
+            <input type="hidden" name="operator" value="[% operator %]">
+            <input type="hidden" name="id" value="[% id %]">
+            <p>
+                <input type="submit" value="Delete plan"/>
+            </p>
+
+        </form>
         
     </div>
 
