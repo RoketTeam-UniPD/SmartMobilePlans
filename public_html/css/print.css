@@ -236,6 +236,12 @@ h1, h2, h3 {
     display: block;
 }
 
+#textError p {
+	color: red;
+	text-align: center;
+	margin: 5em 0;
+}
+
 
 
 
@@ -257,10 +263,14 @@ h1, h2, h3 {
 	padding: 0;
 }
 
-#admin p#textError {
+#adminError {
 	color: red;
-	text-align: center;
-	margin: 2em 0;
+	text-align: left;
+}
+
+#adminSuccess {
+	color: green;
+	text-align: left;
 }
 
 #adminForm {

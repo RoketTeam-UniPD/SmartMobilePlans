@@ -326,6 +326,12 @@ dl.operator {
     display: block;
 }
 
+#textError p {
+	color: red;
+	text-align: center;
+	margin: 5em 0;
+}
+
 
 
 
@@ -337,12 +343,15 @@ dl.operator {
 	margin: 2em;
 }
 
-#admin p#textError {
+#adminError {
 	color: red;
-	text-align: center;
-	margin: 5em 0;
+	text-align: left;
 }
 
+#adminSuccess {
+	color: green;
+	text-align: left;
+}
 
 #adminForm {
 	text-align: left;
