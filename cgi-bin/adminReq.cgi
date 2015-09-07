@@ -36,7 +36,7 @@ if ($pwd ne $pwdc) {
 	print $cgi->redirect('admin.cgi?e=admin-pwd'); 
 }
 
-my $admin  = $doc->getDocumentElement;
+my $admin_n  = $doc->getDocumentElement;
 
 my $node = XML::LibXML::Element->new('admin');
 $node->setAttribute('idref', SUB::generateID($doc));
@@ -50,12 +50,7 @@ $p->appendText($pwd);
 $node->addChild($u);
 $node->addChild($p);
 
-$admin->addChild($node);
+$admin_n->addChild($node);
 
-if (SUB::validateSchema('../data/admins.xsd', $doc) ne undef) {
-	$doc->toFile('../data/admins.xml', 1);
- 	print $cgi->redirect('admin.cgi');
-} else {
-	$doc->toFile('../data/admins.xml', 1);
-	print $cgi->redirect('admin.cgi?e=validate');
-}
+$doc->toFile('../data/admins.xml', 1);
+print $cgi->redirect('admin.cgi?e=admin-success');

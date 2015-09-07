@@ -38,6 +38,8 @@ my $description = $cgi->param('description');
 if (!$title or !$price or !$expiry or !$minutes or !$messages or !$internet or !$description) {
 	saveformData();
 	print $cgi->redirect('admin.cgi?e=plan-empty');  
+
+	exit;
 }
 
 my $plan = $doc->findnodes("//" . $operator . "[title='" . $title . "']");
@@ -153,10 +155,6 @@ $operator_n->addChild($description_n);
 
 $plans->addChild($operator_n);
 
-if (SUB::validateSchema('../data/plans.xsd', $doc) ne undef) {
-	$doc->toFile('../data/plans.xml', 1);
- 	print $cgi->redirect('admin.cgi');
-} else {
-	$doc->toFile('../data/plans.xml', 1);
-	print $cgi->redirect('admin.cgi?e=validate');
-}
+
+$doc->toFile('../data/plans.xml', 1);
+print $cgi->redirect('admin.cgi?e=plan-success');

@@ -139,29 +139,24 @@
             <p>
                 <input type="submit" tabindex="TODO" name="Submit" value="Submit Plan" />
             </p>
+
+            [% IF error == 'plan-empty' %]
+            <p id="adminError">One or more fields are empty!</p>
+            [% END %]
+            [% IF error == 'plan-exists' %]
+            <p id="adminError">Entered title already exists for current operator!</p>
+            [% END %]
+            [% IF error == 'plan-success' %]
+            <p id="adminSuccess">Plan successfully created!</p>
+            [% END %]
         </form>
-        [% IF error == 'plan-empty' %]
-        <p id="textError">One or more fields are empty!</p>
-        [% END %]
-        [% IF error == 'plan-exists' %]
-        <p id="textError">Entered title already exists for current operator!</p>
-        [% END %]
+
 
 
         <form id="adminForm" method="post" action="adminReq.cgi" enctype="multipart/form-data">
 
             <h3>Add a new admin:</h3>
             <p>Il seguente form permette l'inserimento di un nuovo utente admin. Completa tutti i campi per un corretto inserimento.</p>
-
-            [% IF error == 'admin-usr' %]
-            <p id="textError">Entered username already exists!</p>
-            [% END %]
-            [% IF error == 'admin-pwd' %]
-            <p id="textError">Entered passwords does not match!</p>
-            [% END %]
-            [% IF error == 'admin-empty' %]
-            <p id="textError">One or more fields are empty!</p>
-            [% END %]
 
             <p>
                 <label for="username">Username:</label>
@@ -179,6 +174,18 @@
                 <input type="submit" name="Submit" value="Submit Admin"/>
             </p>
 
+            [% IF error == 'admin-usr' %]
+            <p id="adminError">Entered username already exists!</p>
+            [% END %]
+            [% IF error == 'admin-pwd' %]
+            <p id="adminError">Entered passwords does not match!</p>
+            [% END %]
+            [% IF error == 'admin-empty' %]
+            <p id="adminError">One or more fields are empty!</p>
+            [% END %]
+            [% IF error == 'admin-success' %]
+            <p id="adminSuccess">Admin successfully created!</p>
+            [% END %]
         </form>
 
     </div>
