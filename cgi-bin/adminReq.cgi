@@ -23,8 +23,9 @@ my $username = $cgi->param('username');
 my $pwd = $cgi->param('pwd');
 my $pwdc = $cgi->param('pwd-confirm');
 
-if (!$pwd or !$pwdc or !$username) {
-	print $cgi->redirect('admin.cgi?e=admin-empty'); 
+if ($pwd eq '' || $pwdc eq '' || $username eq '') {
+	print $cgi->redirect('admin.cgi?e=admin-empty');
+	exit; 
 }
 
 my $admin = $doc->findnodes("//admin[username='" . $username . "']");
