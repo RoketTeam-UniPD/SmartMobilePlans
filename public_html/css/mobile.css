@@ -80,6 +80,8 @@ p {
 
 .footer {
 	background-color: #bbc7c8;
+	border-bottom: .1em solid #2A2829;
+	border-top: .1em solid #2A2829;
 	clear: both;
 	padding: .5em;
 	text-align: center;
@@ -96,6 +98,10 @@ p {
 /********************************************
 				   MENU
 *********************************************/
+
+.menu {
+	border-top: .1em solid #2A2829;
+}
 
 .menu ul {
 	background-color: #bbc7c8;
