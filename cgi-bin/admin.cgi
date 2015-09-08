@@ -44,6 +44,7 @@ if ($session->param('user') ne undef) {
 
     # recupero username e password passati
     $username = $cgi->param('username');
+    $username =~ tr/a-zA-Z0-9//dc;
     my $pwd = $cgi->param('pwd');
     $pwd = sha256_hex($pwd);
 
