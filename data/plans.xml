@@ -1,63 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plans xmlns:xs="http://www.w3.org/2001/XMLSchema" xs:noNamespaceSchemaLocation="plans.xsd">
-  <vodafone xml:id="id-1" payments="rechargeable">
+  <wind payments="rechargeable" xml:id="id-01">
+    <title>All Inclusive</title>
+    <insertdatetime>2015-09-08T17:07:16</insertdatetime>
+    <price currency="euro">12</price>
+    <expiry unit="week">4</expiry>
+    <rates>
+      <minutes>100</minutes>
+      <messages>100</messages>
+      <internet datasize="GB">1</internet>
+    </rates>
+    <description>The offer is valid until October 4, 2015 Switch to Wind or activate a new SIM card, the activation fee offer is discounted for 1 € instead of 15 €. The promotion applies if you keep the SIM active for 24 months. Otherwise it will be charged the remaining 14 €. GIGA total exceeded, the browsing speed will be reduced to a maximum of 32 kbps with no additional costs.</description>
+  </wind>
+  <wind payments="rechargeable" xml:id="id-2">
+    <title>All Inclusive MEGA</title>
+    <insertdatetime>2015-09-08T17:08:37</insertdatetime>
+    <price currency="euro">19</price>
+    <expiry unit="week">4</expiry>
+    <rates>
+      <minutes>1000</minutes>
+      <messages>1000</messages>
+      <internet datasize="MB">2</internet>
+    </rates>
+    <description>The offer is activated until October 4, 2015 Switch to Wind or activate a new SIM card, the activation cost of options is discounted to € 1 instead of 15. The promotion applies if you keep the SIM active for 24 months. Otherwise it will be charged the remaining 14 €. GIGA total exceeded, the browsing speed will be reduced to a maximum of 32 kbps with no additional costs. The minutes to Wind and messages included in the option are subject to unlimited use contrary to good faith and fair dealing.</description>
+  </wind>
+  <wind payments="subscription" xml:id="id-3">
+    <title>Wind MAGNUM</title>
+    <insertdatetime>2015-09-08T17:10:37</insertdatetime>
+    <price currency="euro">24</price>
+    <expiry unit="month">1</expiry>
+    <rates>
+      <minutes>UNLIMITED</minutes>
+      <messages>UNLIMITED</messages>
+      <internet datasize="GB">2</internet>
+    </rates>
+    <description>WIND MAGNUM, the offer NO TAX with 2 SIM up to 14 Giga share of Smartphone and Tablet, minutes and unlimited SMS. The tablet is included! Also you have the Kindle Paperwhite at a special price.</description>
+  </wind>
+  <vodafone payments="subscription" xml:id="id-4">
+    <title>Relax</title>
+    <insertdatetime>2015-09-08T17:13:29</insertdatetime>
+    <price currency="euro">34</price>
+    <expiry unit="month">1</expiry>
+    <rates>
+      <minutes>UNLIMITED</minutes>
+      <messages>UNLIMITED</messages>
+      <internet datasize="MB">4</internet>
+    </rates>
+    <description>RELAX with you: - minutes and unlimited SMS - 3GB of Internet 4G - a smartphone including RELAX costs 34 € a month and may be charged on a credit card charge equal to the contribution of the offer RELAX. Credit card will be charged the contributions of the options Extra 1 GB and RELAX Super Internet if active on its offer. And 'it provided an activation fee of 100 euro discounted by 100% in the case of Vodafone stay in for at least 12 months. In addition, for customers already, there is an initial contribution of activation of € 29. If you match a smartphone to RELAX there is a stay of 24 or 30 months and a fee for early withdrawal that varies depending on the smartphone model that you choose. The options Extra Extra 2GB and 5GB are not compatible with the offer. Even RELAX Family ric is not matched the offer in rechargeable version (without Government Concession Tax).</description>
+  </vodafone>
+  <vodafone payments="rechargeable" xml:id="id-5">
     <title>Flexi Start</title>
-    <insertdatetime>2015-07-08T12:38:25+01:00</insertdatetime>
-    <available>
-      <startdate>2015-07-08</startdate>
-      <enddate>2015-10-30</enddate>
-    </available>
-    <price currency="euro">10.00</price>
+    <insertdatetime>2015-09-08T17:19:43</insertdatetime>
+    <price currency="euro">10</price>
     <expiry unit="week">4</expiry>
     <rates>
       <minutes>400</minutes>
       <messages>100</messages>
       <internet datasize="MB">100</internet>
     </rates>
-    <description>Con Vodafone Flexi Start ogni 4 settimane hai 400 minuti verso tutti i numeri nazionali, 100 SMS verso tutti e 100MB di Internet alla velocità del 4G. Vodafone Flexi Start costa 10€ ogni 4 settimane e si rinnova in automatico.</description>
+    <description>With Vodafone Flexi Start every 4 weeks you have 400 minutes to all national numbers, 100 SMS to all 100 MB of internet at the speed of 4G. Vodafone Flexi Start has a renewal cost of € 10 every 4 weeks and is renewed automatically. The activation fee is 19 € for already Vodafone customers with unlimited calls to their number Vodafone Favourite; € 15 € 3 promotion for new customers (promotion valid if the SIM is Vodafone for 24 months, otherwise they will be charged the remaining 12 €).
+</description>
   </vodafone>
-  <vodafone xml:id="id-2" payments="subscription">
-    <title>RELAX</title>
-    <insertdatetime>2015-07-09T18:38:25+01:00</insertdatetime>
-    <available disabled="false">
-      <startdate>2015-07-09</startdate>
-      <enddate>2015-12-31</enddate>
-    </available>
-    <price currency="euro">34.00</price>
+  <vodafone payments="rechargeable" xml:id="id-6">
+    <title>Under 30</title>
+    <insertdatetime>2015-09-08T17:29:40</insertdatetime>
+    <price currency="euro">12</price>
     <expiry unit="week">4</expiry>
     <rates>
-      <minutes>Unlimited</minutes>
-      <messages>Unlimited</messages>
-      <internet datasize="GB">3</internet>
+      <minutes>200</minutes>
+      <messages>100</messages>
+      <internet datasize="GB">2</internet>
     </rates>
-    <description>Servizio RELAX. Con tutti i piani RELAX hai incluso un servizio esclusivo.</description>
+    <description>With Vodafone's Under-30 every 4 weeks you 2GB of Internet at the speed of 4G, 200 minutes to all national numbers and 100 SMS to all. Vodafone's Under-30 costs 12 € every 4 weeks and is renewed automatically. Fee: 19 € for Vodafone customers already with You and Me included; 15 € in promotion to 3 Euros for new customers. Promotion valid if the SIM is Vodafone for 24 months, otherwise they will be charged the remaining 12 Euros. Vodafone's Under-30 can be activated on a single SIM by those up to 30 years old. If instead of using only Digital Care, you decide to speak to an operator of the 190, only the subsequent renewal will be 14 Euros (2 charges: 12 euro + 2 euro) instead of 12 €. Secure network, protect your navigation is free for the first three renewals, it costs 1 euro every 4 weeks.</description>
   </vodafone>
-  <tim xml:id="id-3" payments="subscription">
-    <title>TIM SPECIAL VOCE</title>
-    <insertdatetime>2015-07-18T09:50:00+01:00</insertdatetime>
-    <available disabled="false">
-      <startdate>2015-07-09</startdate>
-      <enddate>2015-12-31</enddate>
-    </available>
-    <price currency="euro">10.00</price>
+  <tre payments="subscription" xml:id="id-7">
+    <title>Full 300</title>
+    <insertdatetime>2015-09-08T17:31:29</insertdatetime>
+    <price currency="euro">15</price>
+    <expiry unit="month">1</expiry>
+    <rates>
+      <minutes>300</minutes>
+      <messages>300</messages>
+      <internet datasize="GB">2</internet>
+    </rates>
+    <description>Everything you need in an all inclusive subscription: Calls and SMS included, Internet 4G LTE, and a Smartphone of your choise.</description>
+  </tre>
+  <tre payments="rechargeable" xml:id="id-8">
+    <title>All In One</title>
+    <insertdatetime>2015-09-08T17:33:38</insertdatetime>
+    <price currency="euro">20</price>
+    <expiry unit="month">1</expiry>
+    <rates>
+      <minutes>UNLIMITED</minutes>
+      <messages>UNLIMITED</messages>
+      <internet datasize="GB">2</internet>
+    </rates>
+    <description>The Rechargeable 2GB with unlimited Internet. ALL IN ONE is also available at 10 € with the offer Family Plan. Offer available until 30/09/2015.</description>
+  </tre>
+  <tre payments="rechargeable" xml:id="id-9">
+    <title>All In 800 Extra</title>
+    <insertdatetime>2015-09-08T17:35:11</insertdatetime>
+    <price currency="euro">14</price>
+    <expiry unit="month">1</expiry>
+    <rates>
+      <minutes>800</minutes>
+      <messages>800</messages>
+      <internet datasize="GB">2</internet>
+    </rates>
+    <description>ALL-IN 800 Extra without obligation and with debit credit balance, offers minutes, SMS and 2GB, at 14 € per month. ALL-IN 800 Extra is available, also with direct debit on credit card or current account and with commitment 30 months at 12 € per month. And only until 09.13.2015 you have 4GB internet.</description>
+  </tre>
+  <tim payments="rechargeable" xml:id="id-10">
+    <title>Tim Special Start</title>
+    <insertdatetime>2015-09-08T17:37:15</insertdatetime>
+    <price currency="euro">20</price>
     <expiry unit="week">4</expiry>
     <rates>
-      <minutes>500</minutes>
-      <messages>0</messages>
-      <internet datasize="GB">0</internet>
+      <minutes>1000</minutes>
+      <messages>1000</messages>
+      <internet datasize="GB">2</internet>
     </rates>
-    <description>Con TIM Special Voce chiami tutti e i tuoi minuti non scadono! Quelli che non consumi, li usi nei rinnovi successivi, quando vuoi.</description>
+    <description>With TIM Special Start call and surf at lightning speed thanks to 4G TIM, all in one solution. In addition, with TIM Special Start your minutes do not expire! Those who do not consume, use them in subsequent renewals, when you want. And if your home line is TIM, TIM Special Start also offers unlimited calls to all mobile numbers TIM! The promotion can also be activated at a later activation of TIM Special.</description>
   </tim>
-  <wind payments="rechargeable" xml:id="id-4">
-    <title>test</title>
-    <insertdatetime>2015-09-07 19-30-1441647027</insertdatetime>
-    <price currency="euro">test</price>
-    <expiry unit="day">test2</expiry>
+  <tim payments="rechargeable" xml:id="id-11">
+    <title>Tim Special Unlimited</title>
+    <insertdatetime>2015-09-08T17:38:37</insertdatetime>
+    <price currency="euro">40</price>
+    <expiry unit="month">1</expiry>
     <rates>
-      <minutes>test2</minutes>
-      <messages>test</messages>
-      <internet datasize="MB">test2</internet>
+      <minutes>UNLIMITED</minutes>
+      <messages>UNLIMITED</messages>
+      <internet datasize="MB">4</internet>
     </rates>
-    <description>test</description>
-  </wind>
+    <description>With TIM Special Unlimited you have everything you need in one solution: call, SMS and the Internet in Italy and abroad. And travel in Europe and the USA: 500 minutes 500 SMS 500MB of Internet</description>
+  </tim>
+  <tim payments="rechargeable" xml:id="id-12">
+    <title>Tim Young</title>
+    <insertdatetime>2015-09-08T17:39:47</insertdatetime>
+    <price currency="euro">6</price>
+    <expiry unit="week">4</expiry>
+    <rates>
+      <minutes>60</minutes>
+      <messages>UNLIMITED</messages>
+      <internet datasize="MB">500</internet>
+    </rates>
+    <description>TIM YOUNG Junior is designed to supply the needs of parents and children. Only 6 € / month your child speaks, browse and play with TIMgames Junior and you're comfortable with the service TIM Protect. Activation cost € 3. ONLY ONLINE Activation fee and first fee free. Online is expected buying a TIM CARD at cost of 15 € 10 € of traffic included. The offer is activated only on new lines TIM rechargeable .</description>
+  </tim>
 </plans>
