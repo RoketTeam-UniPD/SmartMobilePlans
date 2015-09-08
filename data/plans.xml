@@ -3,6 +3,10 @@
   <wind payments="rechargeable" xml:id="id-01">
     <title>All Inclusive</title>
     <insertdatetime>2015-09-08T17:07:16</insertdatetime>
+    <available>
+      <startdate>2015-12-01</startdate>
+      <enddate>2016-12-01</enddate>
+    </available>
     <price currency="euro">12</price>
     <expiry unit="week">4</expiry>
     <rates>
@@ -15,6 +19,10 @@
   <wind payments="rechargeable" xml:id="id-2">
     <title>All Inclusive MEGA</title>
     <insertdatetime>2015-09-08T17:08:37</insertdatetime>
+    <available>
+      <startdate>2015-05-01</startdate>
+      <enddate>2015-10-14</enddate>
+    </available>
     <price currency="euro">19</price>
     <expiry unit="week">4</expiry>
     <rates>
@@ -27,6 +35,10 @@
   <wind payments="subscription" xml:id="id-3">
     <title>Wind MAGNUM</title>
     <insertdatetime>2015-09-08T17:10:37</insertdatetime>
+    <available>
+      <startdate>2015-05-01</startdate>
+    <enddate>2015-10-14</enddate>
+    </available>
     <price currency="euro">24</price>
     <expiry unit="month">1</expiry>
     <rates>
@@ -39,6 +51,10 @@
   <vodafone payments="subscription" xml:id="id-4">
     <title>Relax</title>
     <insertdatetime>2015-09-08T17:13:29</insertdatetime>
+    <available>
+      <startdate>2015-05-01</startdate>
+      <enddate>2015-10-14</enddate>
+    </available>
     <price currency="euro">34</price>
     <expiry unit="month">1</expiry>
     <rates>
@@ -51,6 +67,10 @@
   <vodafone payments="rechargeable" xml:id="id-5">
     <title>Flexi Start</title>
     <insertdatetime>2015-09-08T17:19:43</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">10</price>
     <expiry unit="week">4</expiry>
     <rates>
@@ -64,6 +84,10 @@
   <vodafone payments="rechargeable" xml:id="id-6">
     <title>Under 30</title>
     <insertdatetime>2015-09-08T17:29:40</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">12</price>
     <expiry unit="week">4</expiry>
     <rates>
@@ -76,6 +100,10 @@
   <tre payments="subscription" xml:id="id-7">
     <title>Full 300</title>
     <insertdatetime>2015-09-08T17:31:29</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">15</price>
     <expiry unit="month">1</expiry>
     <rates>
@@ -88,6 +116,10 @@
   <tre payments="rechargeable" xml:id="id-8">
     <title>All In One</title>
     <insertdatetime>2015-09-08T17:33:38</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">20</price>
     <expiry unit="month">1</expiry>
     <rates>
@@ -100,6 +132,10 @@
   <tre payments="rechargeable" xml:id="id-9">
     <title>All In 800 Extra</title>
     <insertdatetime>2015-09-08T17:35:11</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">14</price>
     <expiry unit="month">1</expiry>
     <rates>
@@ -112,6 +148,10 @@
   <tim payments="rechargeable" xml:id="id-10">
     <title>Tim Special Start</title>
     <insertdatetime>2015-09-08T17:37:15</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">20</price>
     <expiry unit="week">4</expiry>
     <rates>
@@ -124,6 +164,10 @@
   <tim payments="rechargeable" xml:id="id-11">
     <title>Tim Special Unlimited</title>
     <insertdatetime>2015-09-08T17:38:37</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">40</price>
     <expiry unit="month">1</expiry>
     <rates>
@@ -136,6 +180,10 @@
   <tim payments="rechargeable" xml:id="id-12">
     <title>Tim Young</title>
     <insertdatetime>2015-09-08T17:39:47</insertdatetime>
+    <available>
+      <startdate>2015-04-01</startdate>
+      <enddate>2015-10-30</enddate>
+    </available>
     <price currency="euro">6</price>
     <expiry unit="week">4</expiry>
     <rates>
