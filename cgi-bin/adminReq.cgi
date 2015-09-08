@@ -19,7 +19,7 @@ my $doc = $parser->parse_file('../data/admins.xml');
 
 my $cgi = CGI->new();
 
-my $username = $cgi->param('username');
+my $username = encode_entities($cgi->param('username'));
 my $pwd = $cgi->param('pwd');
 my $pwdc = $cgi->param('pwd-confirm');
 

@@ -36,7 +36,7 @@ my $node = $doc->getElementById("$id");
 
 # Conversione per la visualizzazione corretta in HTML
 my $desc = $node->findvalue('description');
-my $description = encode_entities($desc);
+my $description = decode_entities($desc);
 
 
 # Fill var to send an template file
@@ -49,13 +49,13 @@ my $plan = {
 	startdate		=> $node->findvalue('available/startdate'),
 	enddate			=> $node->findvalue('available/enddate'),
 	currency		=> $node->findvalue('price/@currency'),
-	price			=> $node->findvalue('price'),
+	price			=> decode_entities($node->findvalue('price')),
 	unit			=> $node->findvalue('expiry/@unit'),
 	expiry			=> $node->findvalue('expiry'),
-	minutes			=> $node->findvalue('rates/minutes'),
-	messages		=> $node->findvalue('rates/messages'),
-	datasize		=> $node->findvalue('rates/internet/@datasize'),
-	internet		=> $node->findvalue('rates/internet'),
+	minutes			=> decode_entities($node->findvalue('rates/minutes')),
+	messages		=> decode_entities($node->findvalue('rates/messages')),
+	datasize		=> decode_entities($node->findvalue('rates/internet/@datasize')),
+	internet		=> decode_entities($node->findvalue('rates/internet')),
 	description		=> "$description"
 };
 

@@ -27,16 +27,16 @@ my $insertdatetime = strftime "%Y-%m-%dT%H:%M:%S", localtime;
 my $startdate = $cgi->param('syear') . "-" . $cgi->param('smonth') . "-" . $cgi->param('sday');
 my $enddate = $cgi->param('eyear') . "-" . $cgi->param('emonth') . "-" . $cgi->param('eday');
 my $price = $cgi->param('price');
-$price =~ s/[^\d.,]//g;
+$price =~ s/[^\d.,]//g; $price = encode_entities($price);
 my $currency = $cgi->param('currency');
 my $unit = $cgi->param('unit');
 my $expiry = $cgi->param('expiry');
 $expiry =~ s/[^\d]//g;
-my $minutes = $cgi->param('minutes');
-my $messages = $cgi->param('messages');
-my $datasize = $cgi->param('datasize');
-my $internet = $cgi->param('internet');
-my $description = $cgi->param('description');
+my $minutes = encode_entities($cgi->param('minutes'));
+my $messages = encode_entities($cgi->param('messages'));
+my $datasize = encode_entities($cgi->param('datasize'));
+my $internet = encode_entities($cgi->param('internet'));
+my $description = encode_entities($cgi->param('description'));
 
 if (!$title or !$price or !$expiry or !$minutes or !$messages or !$internet or !$description) {
 	saveformData();
