@@ -65,11 +65,12 @@ sub printStartHeader {
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <title>$title Smart Mobile Plans Site</title>
-    <meta name="keywords" content="" />
+    <meta name="description" content="Choosing a better plan offers for your mobile phone in to Smart Mobile Plans" />
+    <meta name="keywords" content="better plan, choose plan, cellphone, mobile, mobile service, plans vodafone, tim, wind, tre" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../css/default.css" media="handheld, screen" />
+    <link rel="stylesheet" type="text/css" href="../css/mobile.css" media="handheld, screen and (max-width:640px), only screen and (max-device-width:640px)" />
     <link rel="stylesheet" type="text/css" href="../css/print.css" media="print" />
-    <link rel="stylesheet" type="text/css" href="../css/default.css" media="only screen and (min-width: 641px)" />
-    <link rel="stylesheet" type="text/css" href="../css/mobile.css" media="only screen and (max-width: 640px)" />
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
 </head>
 <body>
