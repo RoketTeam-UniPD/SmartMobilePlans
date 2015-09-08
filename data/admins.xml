@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <admins xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <admin xml:id="id-1">
+  <admin id="id-1">
     <username>admin</username>
     <password>a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8</password>
   </admin>
-  <admin xml:id="id-2">
+  <admin id="id-2">
     <username>gcusinat</username>
     <password>4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2</password>
   </admin>
-  <admin xml:id="id-3">
+  <admin id="id-3">
     <username>lsantacat</username>
     <password>d70f47790f689414789eeff231703429c7f88a10210775906460edbf38589d90</password>
   </admin>
