@@ -134,6 +134,7 @@ $operator_n->setAttribute("xml:id", SUB::generateID($doc));
 
 $operator_n->addChild($title_n);
 $operator_n->addChild($insertdatetime_n);
+$operator_n->addChild($available_n);
 $operator_n->addChild($price_n);
 $operator_n->addChild($expiry_n);
 $operator_n->addChild($rates_n);
