@@ -64,7 +64,7 @@ foreach my $node ($doc->findnodes("//$operator_name")){
 
 	my $plan = {
 		operator		=> $node->getName(),
-		id				=> $node->findvalue('@xml:id'),
+		id				=> $node->findvalue('@id'),
 		title			=> $node->findvalue('title'),
 		currency		=> $node->findvalue('price/@currency'),
 		price			=> $node->findvalue('price'),

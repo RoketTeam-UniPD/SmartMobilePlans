@@ -24,7 +24,7 @@ my $id = $cgi->param('id');
 
 my $root = $doc->documentElement();
 for my $node ($root->findnodes(
-   '//' . $operator . "[\@xml:id='" . $id . "']"
+   '//' . $operator . "[\@id='" . $id . "']"
 )) {
    $root->removeChild($node);
 }

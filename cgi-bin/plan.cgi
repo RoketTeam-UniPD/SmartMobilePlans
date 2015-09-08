@@ -45,7 +45,7 @@ $insertdatetime =~ s/T/ /g;
 # Fill var to send an template file
 my $plan = {
 	operator		=> $node->getName(),
-	id				=> $node->findvalue('@xml:id'),
+	id				=> $node->findvalue('@id'),
 	payments		=> $node->findvalue('@payments'),
 	title			=> $node->findvalue('title'),
 	insertdatetime	=> $insertdatetime,

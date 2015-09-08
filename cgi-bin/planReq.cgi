@@ -136,7 +136,7 @@ if ($operator eq "vodafone") {
 }
 
 $operator_n->setAttribute("payments", $payments);
-$operator_n->setAttribute("xml:id", SUB::generateID($doc));
+$operator_n->setAttribute("id", SUB::generateID($doc));
 
 $operator_n->addChild($title_n);
 $operator_n->addChild($insertdatetime_n);
