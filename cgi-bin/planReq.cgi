@@ -31,14 +31,14 @@ $price =~ s/[^\d.,]//g; $price = encode_entities($price);
 my $currency = $cgi->param('currency');
 my $unit = $cgi->param('unit');
 my $expiry = $cgi->param('expiry');
-$expiry =~z\ s/[^\d]//g;
-my $minutes = encode_entities($cgi->param('minutes'));
-my $messages = encode_entities($cgi->param('messages'));
-my $datasize = encode_entities($cgi->param('datasize'));
-my $internet = encode_entities($cgi->param('internet'));
-my $description = encode_entities($cgi->param('description'));
+$expiry =~ s/[^\d]//g;
+my $minutes = $cgi->param('minutes');
+my $messages = $cgi->param('messages');
+my $datasize = $cgi->param('datasize');
+my $internet = $cgi->param('internet');
+my $description = $cgi->param('description');
 
-if (!$title or !$price or !$expiry or !$minutes or !$messages or !$internet or !$description) {
+if ($title eq '' || $price eq '' || $expiry eq '' || $minutes eq '' || $messages eq '' || $internet eq '' || $description eq '') {
 	saveformData();
 	print $cgi->redirect('admin.cgi?e=plan-empty');  
 	exit;
@@ -50,6 +50,12 @@ if ($plan) {
 	print $cgi->redirect('admin.cgi?e=plan-exists'); 
 	exit;
 }
+
+$minutes = encode_entities($minutes);
+$messages = encode_entities($messages);
+$datasize = encode_entities($datasize);
+$internet = encode_entities($internet);
+$description = encode_entities($description);
 
 sub saveformData {
 	my $session = CGI::Session->load();
