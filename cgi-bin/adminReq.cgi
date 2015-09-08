@@ -23,6 +23,12 @@ my $username = encode_entities($cgi->param('username'));
 my $pwd = $cgi->param('pwd');
 my $pwdc = $cgi->param('pwd-confirm');
 
+my $usr = $username;
+$usr =~ tr/a-zA-Z0-9//dc;
+if ($usr ne $username) {
+	print $cgi->redirect('admin.cgi?e=admin-usr-char');
+}
+
 if ($pwd eq '' || $pwdc eq '' || $username eq '') {
 	print $cgi->redirect('admin.cgi?e=admin-empty');
 	exit; 

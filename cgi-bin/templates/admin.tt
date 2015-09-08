@@ -156,9 +156,9 @@
 
             <h3>Add a new admin:</h3>
             <p>With following form you can add a new admin to our site. Make sure to complete every field in order to successfully save the admin.</p>
-
+            <p>*Username must contain only letters (Aa-Zz) and numbers (0-9).</p> 
             <p>
-                <label for="username">Username:</label>
+                <label for="username">Username*:</label>
                 <input title="username" type="text" name="username" id="username"/>
             </p>
             <p>
@@ -184,6 +184,9 @@
             [% END %]
             [% IF error == 'admin-success' %]
             <p id="adminSuccess">Admin successfully created!</p>
+            [% END %]
+            [% IF error == 'admin-usr-char' %]
+            <p id="adminError">Entered username is incorrect!</p>
             [% END %]
         </form>
 
