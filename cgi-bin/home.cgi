@@ -61,11 +61,13 @@ foreach my $node ($doc->findnodes("/plans/child::*[position() > last()-5]")){
     # Conversione per la visualizzazione corretta in HTML
     my $description = $node->findvalue('description');
     my $description = decode_entities($description);
+    my $insertdatetime = $node->findvalue('insertdatetime');
+    $insertdatetime =~ s/T/ /g;
 
     my $plan = {
         id              => $node->findvalue('@xml:id'),
         title           => $node->findvalue('title'),
-        insertdatetime  => $node->findvalue('insertdatetime'),
+        insertdatetime  => $insertdatetime,
         description     => $description,
     };
 

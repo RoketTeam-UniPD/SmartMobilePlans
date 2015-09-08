@@ -31,7 +31,7 @@ $price =~ s/[^\d.,]//g; $price = encode_entities($price);
 my $currency = $cgi->param('currency');
 my $unit = $cgi->param('unit');
 my $expiry = $cgi->param('expiry');
-$expiry =~ s/[^\d]//g;
+$expiry =~z\ s/[^\d]//g;
 my $minutes = encode_entities($cgi->param('minutes'));
 my $messages = encode_entities($cgi->param('messages'));
 my $datasize = encode_entities($cgi->param('datasize'));
@@ -76,23 +76,6 @@ sub saveformData {
 	);
 	$session->param("form-data", \%formData);
 }
-
-## TEST
-# my $operator = "tre";
-# my $payments = "rechargable";
-# my $title = "My title";
-# my $insertdatetime = strftime "%Y-%m-%d %H-%M-%s", localtime;
-# my $startdate = "2014-12-21";
-# my $enddate = "2015-6-5";
-# my $price = "34";
-# my $currency = "euro";
-# my $unit = "week";
-# my $expiry = "4";
-# my $minutes = "100";
-# my $messages = "100";
-# my $datasize = "GB";
-# my $internet = "3";
-# my $description = "This is the description";
 
 
 my $plans  = $doc->getDocumentElement;

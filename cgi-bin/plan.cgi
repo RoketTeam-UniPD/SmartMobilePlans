@@ -37,6 +37,9 @@ my $node = $doc->getElementById("$id");
 # Conversione per la visualizzazione corretta in HTML
 my $desc = $node->findvalue('description');
 my $description = decode_entities($desc);
+my $insertdatetime = $node->findvalue('insertdatetime');
+$insertdatetime =~ s/T/ /g;
+
 
 
 # Fill var to send an template file
@@ -45,7 +48,7 @@ my $plan = {
 	id				=> $node->findvalue('@xml:id'),
 	payments		=> $node->findvalue('@payments'),
 	title			=> $node->findvalue('title'),
-	insertdatetime	=> $node->findvalue('insertdatetime'),
+	insertdatetime	=> $insertdatetime,
 	startdate		=> $node->findvalue('available/startdate'),
 	enddate			=> $node->findvalue('available/enddate'),
 	currency		=> $node->findvalue('price/@currency'),
