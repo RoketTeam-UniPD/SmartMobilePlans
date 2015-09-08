@@ -15,6 +15,9 @@
             <p title="Description">[% p.description %]</p>
         </li>[% END %]
         </ol>
+        <p class="topPage">
+            <a title="Go to top of page" tabindex="7" href="#header">Back to the top of page</a>
+        </p>
     </div>
 
 </div>

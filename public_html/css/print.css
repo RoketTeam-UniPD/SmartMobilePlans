@@ -13,19 +13,19 @@ h1, h2, h3 {
 				HEADER & FOOTER
 *********************************************/
 
-.header {
+#header {
 	margin: 0;
 	padding: 0;
 }
 
-.header h1 {
+#header h1 {
 	margin: 0;
 	font-size: 1.8em;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-.header p {
+#header p {
 	margin: 0;
 	font-size: .95em;
 	text-transform: uppercase;

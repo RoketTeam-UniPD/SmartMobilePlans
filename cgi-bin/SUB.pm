@@ -83,7 +83,7 @@ sub printStartHeader {
 
 sub printHeaderSITE {
     my $hr = qq{
-<div class="header" title="Welcome to Smart Mobile Plans, a site that collects the best offers from the leading mobile operators. We help you choose a better plan for your smartphone and make the right choise.">
+<div id="header" title="Welcome to Smart Mobile Plans, a site that collects the best offers from the leading mobile operators. We help you choose a better plan for your smartphone and make the right choise.">
     <h1 title="Title">Smart Mobile Plans</h1>
     <p title="Description of">Choosing a mobile phone plan has never been this simple!</p>
 </div>
@@ -197,7 +197,6 @@ sub printFooterHTML {
         <a href="http://validator.w3.org/check?uri=referer">
             <img src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
         </a>
-
         <a href="http://jigsaw.w3.org/css-validator/check/referer">
             <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valido!" />
         </a>
