@@ -148,6 +148,8 @@ $operator_n->addChild($description_n);
 
 $plans->addChild($operator_n);
 
+my $session = CGI::Session->load();
+$session->clear("form-data");
 
 $doc->toFile('../data/plans.xml', 1);
 print $cgi->redirect('admin.cgi?e=plan-success');
