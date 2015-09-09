@@ -65,7 +65,7 @@ foreach my $node ($doc->findnodes("/plans/child::*[position() > last()-5]")){
     $insertdatetime =~ s/T/ /g;
 
     my $plan = {
-        id              => $node->findvalue('id'),
+        id              => $node->findvalue('@id'),
         title           => $node->findvalue('title'),
         insertdatetime  => $insertdatetime,
         description     => $description,
