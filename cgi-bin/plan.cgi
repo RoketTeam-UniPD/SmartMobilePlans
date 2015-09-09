@@ -31,7 +31,7 @@ my $id = $cgi->param('id');
 
 
 # Get element from id
-my $node = $doc->getElementById("$id");
+my $node = $doc->findnodes(qq(//*[\@id="$id"]))->pop();
 
 
 # Conversione per la visualizzazione corretta in HTML
