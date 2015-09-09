@@ -14,7 +14,6 @@ use CGI::Session;
 use POSIX qw(strftime);
 use Template;
 use XML::LibXML;
-#forse inutile use LWP::UserAgent;
 
 
 # importazione funzioni comuni

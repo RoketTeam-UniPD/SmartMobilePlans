@@ -12,7 +12,7 @@ use CGI;
 use HTML::Entities;
 use Template;
 use XML::LibXML;
-# da cancellare ? use LWP::UserAgent;
+
 
 # importazione funzioni comuni
 use SUB;
