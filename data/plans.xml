@@ -193,20 +193,4 @@
     </rates>
     <description>TIM YOUNG Junior is designed to supply the needs of parents and children. Only 6 &amp;euro; / month your child speaks, browse and play with TIMgames Junior and you&amp;#39;re comfortable with the service TIM Protect. Activation cost &amp;euro; 3. ONLY ONLINE Activation fee and first fee free. Online is expected buying a TIM CARD at cost of 15 &amp;euro; 10 &amp;euro; of traffic included. The offer is activated only on new lines TIM rechargeable .</description>
   </tim>
-  <wind payments="rechargeable" id="id-13">
-    <title>tewst</title>
-    <insertdatetime>2015-09-09T01:31:54</insertdatetime>
-    <available>
-      <startdate>2015-01-01</startdate>
-      <enddate>2015-01-01</enddate>
-    </available>
-    <price currency="euro">4</price>
-    <expiry unit="day">4</expiry>
-    <rates>
-      <minutes>4</minutes>
-      <messages>4</messages>
-      <internet datasize="MB">4</internet>
-    </rates>
-    <description>wqeqwe</description>
-  </wind>
 </plans>

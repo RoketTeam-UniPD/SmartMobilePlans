@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<admins xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<admins xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="admins.xsd">
   <admin id="id-1">
     <username>admin</username>
     <password>a1159e9df3670d549d04524532629f5477ceb7deec9b45e47e8c009506ecb2c8</password>
